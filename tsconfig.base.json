@@ -1,0 +1,35 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2020", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@org/common": ["common/src/index.ts"],
+      "@org/common/server": ["common/src/server.ts"],
+      "@org/store": ["store/src/index.ts"],
+      "@org/store/server": ["store/src/server.ts"],
+      "@org/ui": ["ui/src/index.ts"],
+      "@org/ui/server": ["ui/src/server.ts"]
+    }
+  },
+  "exclude": [
+    "node_modules",
+    "tmp",
+    "jest.config.ts",
+    "src/**/*.spec.ts",
+    "src/**/*.test.ts",
+    "**e2e/**/*",
+    "dist/org/**/*"
+  ]
+}
