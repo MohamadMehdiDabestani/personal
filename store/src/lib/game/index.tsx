@@ -1,19 +1,21 @@
 import { create } from 'zustand';
 
-export interface GameState {
+type GameState = {
   ai: string;
   client: string;
   currentPlayer: string;
   spot: string[][];
   winner: null | string;
   isDraw: boolean;
+}
+type Actions = {
   setSpot: (x: number, y: number, value: string) => void;
   toggleCurrentPlayer: () => void;
   drawGame: () => void;
   setWinner: (winner: string) => void;
-}
-
-export const useGame = create<GameState>()((set) => ({
+  rest: () => void;
+};
+const init: GameState = {
   ai: 'X',
   client: 'O',
   currentPlayer: 'O',
@@ -24,16 +26,31 @@ export const useGame = create<GameState>()((set) => ({
     ['', '', ''],
     ['', '', ''],
   ],
+};
+export const useGame = create<GameState & Actions>()((set, get) => ({
+  ...init,
   toggleCurrentPlayer: () =>
-    set((s) => ({ currentPlayer: s.currentPlayer === 'X' ? 'O' : 'X' })),
+    set(() => ({ currentPlayer: get().currentPlayer === 'X' ? 'O' : 'X' })),
   setSpot: (x: number, y: number, value: string) =>
-    set((s) => {
-      if(s.isDraw || s.winner !== null) return {};
-      const oldList = [...s.spot];
+    set(() => {
+      if (get().isDraw || get().winner !== null) return {};
+      const oldList = [...get().spot];
       oldList[x][y] = value;
       return { spot: oldList };
     }),
-  drawGame: () => set((s) => ({ isDraw: true })),
-  setWinner: (winner) => set((s) => ({ winner: winner })),
+  drawGame: () => set(() => ({ isDraw: true })),
+  setWinner: (winner) => set(() => ({ winner: winner })),
+  rest: () => {
+    set({
+      spot: [
+        ['', '', ''],
+        ['', '', ''],
+        ['', '', ''],
+      ],
+      currentPlayer: 'O',
+      winner: null,
+      isDraw: false,
+    });
+  },
 }));
 export default useGame;

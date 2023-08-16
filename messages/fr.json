@@ -1,6 +1,24 @@
 {
-    "Index": {
-      "title": "سلاام"
+  "menu": {
+    "aboutMe": "درباره ی من",
+    "blog": "بلاگ",
+    "weatherApp": "برنامه آب و هوا",
+    "todoApp": "برنامه Todo",
+    "ticTacToe": "بازی دوز",
+    "toggleTheme" : "تغییر پوسته"
+  },
+  "page": {
+    "game": {
+      "tableAlgo": "قدرت گرفته شده با الگوریتم Minmax"
+    },
+    "todo": {
+      "form": {
+        "title": "عنوان"
+      }
     }
+  },
+  "validation": {
+    "required": "لطفا {name} را وارد کنید",
+    "min": "{name} باید بیشتر از {length} کاراکتر باشد"
   }
-  
+}

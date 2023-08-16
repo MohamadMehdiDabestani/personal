@@ -41,7 +41,6 @@ export const checkWinner = (board: Board) => {
   if (winner == null && openSpots === 0) {
     return 'draw';
   } else {
-
     return winner;
   }
 };
@@ -59,7 +58,6 @@ function minimax(board: Board, depth: number, isMaximizing: boolean) {
   const result = checkWinner(board);
 
   if (result !== null) {
-   
     return scores[result as keyof Score];
   }
 
@@ -93,7 +91,16 @@ function minimax(board: Board, depth: number, isMaximizing: boolean) {
     return bestScore;
   }
 }
-
+export const checkAndStop = () => {
+  const result = checkWinner(useGame.getState().spot);
+  if (result) {
+    if (result === 'draw') {
+      useGame.getState().drawGame();
+    } else {
+      useGame.getState().setWinner(result);
+    }
+  }
+};
 export const bestMove = (board: Board) => {
   // AI to make its turn
   let bestScore = -Infinity;
@@ -108,8 +115,12 @@ export const bestMove = (board: Board) => {
         if (score > bestScore && useGame.getState().currentPlayer === ai) {
           bestScore = score;
           move = { i, j };
-          useGame.getState().setSpot(move?.i as number, move?.j as number, ai);
-          useGame.getState().toggleCurrentPlayer();
+          if (useGame.getState().isDraw || useGame.getState().winner !== '') {
+            useGame
+              .getState()
+              .setSpot(move?.i as number, move?.j as number, ai);
+            useGame.getState().toggleCurrentPlayer();
+          }
         }
       }
     }

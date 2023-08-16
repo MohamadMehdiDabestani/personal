@@ -1,4 +1,4 @@
-"use client"
+'use client';
 import { Fragment, useEffect } from 'react';
 import MuiDrawer from '@mui/material/Drawer';
 import { styled } from '@mui/material/styles';
@@ -15,7 +15,6 @@ import Link from 'next/link';
 import { useMenu } from '@org/store';
 import { Setting } from './setting';
 
-// import { Setting } from './Setting';
 const drawerWidth = 220;
 
 const openedMixin = (theme: any) => ({
@@ -88,7 +87,6 @@ export const Menu = () => {
       <Drawer
         open={open}
         variant="permanent"
-        
         sx={{
           overflowY: 'hidden',
           img: {
@@ -114,18 +112,7 @@ export const Menu = () => {
           }}
         >
           <DrawerHeader>
-            {open && (
-              <Fragment>
-                <Setting />
-                <Tooltip title="خانه">
-                  <Link href="/">
-                    <IconButton onClick={logout}>
-                      <HomeIcon />
-                    </IconButton>
-                  </Link>
-                </Tooltip>
-              </Fragment>
-            )}
+            {open && <Setting />}
             <IconButton onClick={() => toggle(!open)}>
               {open ? <CloseIcon /> : <MenuIcon />}
             </IconButton>

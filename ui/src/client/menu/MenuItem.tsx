@@ -7,12 +7,9 @@ import { Box, List } from '@mui/material';
 
 export const MenuItem = () => {
 
-  const { toggle } = useMenu((s) => s);
-  const handleClick = () => {
-    toggle(true);
-  };
+
   return (
-    <Box onClick={handleClick} sx={{ m: '7px 10px' }}>
+    <Box  sx={{ m: '7px 10px' }}>
       <List
         sx={(theme) => ({
           '& > .active': {

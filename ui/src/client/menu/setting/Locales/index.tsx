@@ -32,7 +32,7 @@ export const LocalesMenu = () => {
         onClick={handleLanguageClick}
         sx={{ width: '100%', height: '100%' }}
       >
-        language
+        Language
       </Typography>
       <Menu
         anchorEl={anchorLanguageEl}

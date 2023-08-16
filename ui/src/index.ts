@@ -2,3 +2,4 @@
 export * from './lib/config/config'
 export * from './client/page'
 export * from './client/menu'
+export * from './client/notification'

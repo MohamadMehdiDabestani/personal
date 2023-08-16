@@ -1,7 +1,7 @@
 import { Layout } from 'ui/src/client/layout';
 import { NextIntlClientProvider } from 'next-intl';
 import { notFound } from 'next/navigation';
-import { StyleConfig } from '@org/ui';
+import { Notification, StyleConfig } from '@org/ui';
 
 export function generateStaticParams() {
   return [{ locale: 'en' }, { locale: 'fr' }];
@@ -24,6 +24,7 @@ export default async function LocaleLayout({
         <StyleConfig options={{ key: 'mui' }}>
           <NextIntlClientProvider locale={locale} messages={messages}>
             <Layout>{children}</Layout>
+            <Notification />
           </NextIntlClientProvider>
         </StyleConfig>
       </body>

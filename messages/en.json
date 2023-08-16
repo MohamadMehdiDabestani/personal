@@ -1,5 +1,24 @@
 {
-  "Index": {
-    "title": "Hello world!"
+  "menu": {
+    "aboutMe": "About me",
+    "blog": "Blog",
+    "weatherApp": "Weather App",
+    "todoApp": "Todo App",
+    "ticTacToe": "Tic Tac Toe",
+    "toggleTheme" : "Toggle theme"
+  },
+  "page": {
+    "game": {
+      "tableAlgo": "Powered by Minmax algorithm"
+    },
+    "todo": {
+      "form": {
+        "title": "Title"
+      }
+    }
+  },
+  "validation": {
+    "required": "Please enter {name}",
+    "min": "{name} must be more than {length} character"
   }
 }

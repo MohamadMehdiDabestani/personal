@@ -2,8 +2,9 @@ import Grid from '@mui/material/Unstable_Grid2';
 import CloseIcon from '@mui/icons-material/Close';
 import PanoramaFishEyeIcon from '@mui/icons-material/PanoramaFishEye';
 import { useGame } from '@org/store';
-import { bestMove } from '@org/common';
-import { useEffect } from 'react';
+import { bestMove, checkAndStop } from '@org/common';
+
+
 interface Props {
   value: string;
   x: number;
@@ -13,14 +14,12 @@ export const Tile = ({ value, x, y }: Props) => {
   const { spot, currentPlayer, setSpot, toggleCurrentPlayer  } = useGame(
     (s) => s
   );
-  // useEffect(() => {
-  //   bestMove(spot);
-  // }, []);
+
   const handleClick = () => {
-    if (currentPlayer === 'O') {
-      console.log('==================================== hit' , x , y);
+    if (currentPlayer === 'O' && spot[x][y] === '') {
       setSpot(x, y, 'O');
       toggleCurrentPlayer();
+      checkAndStop()
       bestMove(spot);
     }
   };
