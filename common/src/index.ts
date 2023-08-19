@@ -2,3 +2,4 @@
 
 export * from './lib/game'
 export * from './lib/hooks/useLocalStorage'
+export * from './lib/blog/types'

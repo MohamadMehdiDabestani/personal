@@ -16,15 +16,14 @@ export const data = [
     icon: <RssFeedIcon sx={{ marginRight: '5%' }} />,
     
   },
-
   {
-    id: '4',
+    id: '3',
     href: '/todo',
     title: 'todoApp',
     icon: <FormatListNumberedRtlIcon sx={{ marginRight: '5%' }} />,
   },
   {
-    id: '5',
+    id: '4',
     href: '/game',
     title: 'ticTacToe',
     icon: <GamepadIcon sx={{ marginRight: '5%' }} />,

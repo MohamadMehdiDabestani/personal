@@ -24,7 +24,8 @@
     "**/*.jsx",
     ".next/types/**/*.ts",
     "dist/org/.next/types/**/*.ts",
-    "next-env.d.ts"
+    "next-env.d.ts",
+    "env.d.ts",
   ],
   "extends": "./tsconfig.base.json"
 }

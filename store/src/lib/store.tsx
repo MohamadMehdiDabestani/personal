@@ -1,5 +1,5 @@
 import { create } from 'zustand';
-/* eslint-disable-next-line */
+
 export interface MenuState {
   open: boolean;
   toggle: (toggle: boolean) => void;
