@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600;650;700&family=Vazirmatn:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+:root {
+  --font-family-app: "Inter", sans-serif;
+}
+:root[dir="rtl"], :root:lang(fa) {
+  --font-family-app: "Vazirmatn", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@theme {
+  --color-background: #11131a;
+  --color-on-background: #e1e2ec;
+  --color-surface: #11131a;
+  --color-on-surface: #e1e2ec;
+  --color-surface-variant: #32353c;
+  --color-on-surface-variant: #c2c6d6;
+  --color-surface-container-low: #191b22;
+  --color-outline-variant: #424753;
+  --color-primary: #afc6ff;
+  --color-on-primary: #002d6c;
+  --color-accent-soft: rgba(79, 140, 255, 0.12);
+
+  --font-body: var(--font-family-app);
+  --font-sans: var(--font-family-app);
+
+  --spacing-base: 8px;
+  --spacing-gutter-sm: 16px;
+  --spacing-gutter-md: 24px;
+  --spacing-gutter-lg: 32px;
+  --spacing-section-sm: 40px;
+  --spacing-section-md: 48px;
+  --spacing-section-lg: 64px;
+}
+
+@utility text-body {
+  font-size: 18px;
+  line-height: 1.65;
+  font-weight: 450;
+}
+@utility text-body-sm {
+  font-size: 16px;
+  line-height: 1.65;
+  font-weight: 450;
+}
+@utility text-h1 {
+  font-size: 48px;
+  line-height: 1.1;
+  font-weight: 700;
+}
+@utility text-h2 {
+  font-size: 32px;
+  line-height: 1.2;
+  font-weight: 650;
+}
+@utility text-h3 {
+  font-size: 22px;
+  line-height: 1.3;
+  font-weight: 600;
+}
+@utility text-h2-mobile {
+  font-size: 28px;
+  line-height: 1.2;
+  font-weight: 650;
+}
+@utility text-small {
+  font-size: 14px;
+  line-height: 1.55;
+  font-weight: 450;
+}
+@utility text-h1-mobile {
+  font-size: 40px;
+  line-height: 1.1;
+  font-weight: 700;
+}
+
+body {
+  @apply bg-background text-on-background font-body antialiased min-h-screen flex flex-col;
+}

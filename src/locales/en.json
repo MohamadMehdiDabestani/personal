@@ -1,0 +1,71 @@
+{
+  "nav": {
+    "projects": "Projects",
+    "about": "About",
+    "skills": "Skills",
+    "contact": "Contact",
+    "portfolio": "Portfolio"
+  },
+  "hero": {
+    "openToRemote": "Open to Remote",
+    "title": "Mohammad Mehdi — Next.js Developer",
+    "description": "Building fast, maintainable products with Next.js & TypeScript. Specialized in App Router, Performance, and Real-time systems.",
+    "viewCaseStudy": "View Featured Case Study",
+    "contact": "Contact Me"
+  },
+  "availability": {
+    "openToWork": "Open to Work",
+    "title": "Available for Remote Full-Time Roles",
+    "description": "I’m currently open to joining a product-focused team as a Next.js developer, with a preference for remote collaboration.",
+    "remoteOnly": "Remote only",
+    "fullTime": "Full-time preferred",
+    "contact": "Contact Me"
+  },
+  "featured": {
+    "title": "Featured Project",
+    "projectTitle": "Healthcare Management System",
+    "projectDesc": "A high-performance enterprise solution featuring a relational DB with PostgreSQL, real-time monitoring via WebSockets, and complex Role-Based Access Control (RBAC). Built entirely on the Next.js App Router for optimal Server-Side Rendering.",
+    "deepDive": "Deep Dive"
+  },
+  "skills": {
+    "title": "Core Skills",
+    "core": "Core",
+    "state": "State & Data",
+    "realtime": "Real-time",
+    "ui": "UI"
+  },
+  "about": {
+    "title": "About Me",
+    "intro": "I’m a Next.js developer focused on building fast, maintainable web applications with strong attention to clean architecture, UX, and performance. My experience has been primarily project-based, and I’m currently looking for a full-time opportunity where I can contribute within a strong product or engineering team.",
+    "bullets": [
+      "Strong with TypeScript and modern React patterns",
+      "Experience building real-time features with Socket.IO / SSE",
+      "Comfortable working with PostgreSQL and modern ORMs like Drizzle and Prisma",
+      "Familiar with RBAC, admin panels, and scalable frontend architecture",
+      "I care about accessibility, performance, and readable, maintainable code"
+    ],
+    "ctaPrimary": "View Case Study",
+    "ctaSecondary": "Contact Me",
+    "quickFacts": {
+      "experienceLabel": "Experience",
+      "experienceValue": "Project-based since 2021",
+      "roleLabel": "Role preference",
+      "roleValue": "Full-time",
+      "modeLabel": "Work mode",
+      "modeValue": "Remote",
+      "stackLabel": "Stack",
+      "stackValue": "Next.js, TypeScript, PostgreSQL"
+    }
+  },
+  "contact": {
+    "title": "Contact Me",
+    "description": "I usually respond as soon as possible and I’m happy to connect regarding professional opportunities.",
+    "phone": "Phone",
+    "email": "Email",
+    "telegram": "Telegram",
+    "github": "GitHub"
+  },
+  "footer": {
+    "copyright": "© {{year}} Next.js Developer. All rights reserved."
+  }
+}
