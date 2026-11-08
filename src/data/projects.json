@@ -118,7 +118,7 @@
       "title": "پلتفرم معاملاتی و موتور مچینگ بلادرنگ رمزارز (پروژه دمو و معماری)",
       "subtitle": "پیاده‌سازی متمرکز هسته مچینگ O(log N) بر پایه B-Tree، لایه BFF با Next.js، جریان استریم WebSocket و لجر حسابداری دوبل",
       "role": "توسعه‌دهنده ارشد Full Stack و معمار سیستم",
-      "timeline": "۱۴۰۳ – ۱۴۰۴",
+      "timeline": "1405 – 1405",
       "category": "سیستم‌های مالی / زیرساخت معاملاتی",
       "shortDescription": "یک پروژه دمو و اثبات مفهوم (PoC) با تمرکز تخصصی بر معماری هسته معاملات رمزارز؛ شامل موتور مچینگ B-Tree درون حافظه، خط لوله وب‌سوکت پرسرعت با کنترل فشار معکوس، دفاتر کل حسابداری دوبل و لایه BFF در Next.js 16 بدون ورود به فیچرهای بی‌پایان یک صرافی تجاری.",
       "fullDescription": [
@@ -204,7 +204,7 @@
     "id": "healthcare-management-system",
     "slug": "healthcare-management-system",
     "featured": false,
-    "status": "production",
+    "status": "completed",
     "year": "2025",
     "coverImage": "https://lh3.googleusercontent.com/aida-public/AB6AXuADfSjw0H_VzjTXLdzNcLhSu4494QxRQMPkREEAAITXZjzk2ndlpo8sr7P9D1bzaDwAQESt0RutkHw36zMzPXxBbZQnAyEV8vbspExgQ9gUSJtdIRIiXbFchykHaxZPaTMGU_YHUrNTkk6fSOrRaXgmjT6cYhvZWhdgJMetuNDBGiGDA6NOZaKEls9NksLsB3323ntC5W5iTsORW9_kBlWVg2T1I8cdBGep69Q5-Y8t6NQ4t6a2q2zfVzaqZkC-BfHhuWno3qXuea4",
     "links": {
@@ -314,7 +314,7 @@
       "title": "سامانه جامع مدیریت هوشمند مراکز درمانی",
       "subtitle": "پلتفرم سازمانی و بلادرنگ مدیریت کلینیک، پذیرش، پزشکان و داروخانه با کنترل دسترسی چندسطحی",
       "role": "توسعه‌دهنده ارشد فول‌استک / Next.js",
-      "timeline": "۱۴۰۳ – ۱۴۰۴",
+      "timeline": "1404 – 1404",
       "category": "سامانه سازمانی / سلامت دیجیتال",
       "shortDescription": "یک راهکار سازمانی پرسرعت با دیتابیس PostgreSQL و Drizzle ORM، بروزرسانی لحظه‌ای نوبت‌ها و نسخه‌ها با Socket.IO و SSE، قابلیت درون‌ریزی و برون‌بری اکسل (Excel Import/Export) و سیستم کنترل دسترسی دقیق (RBAC) برای ۴ نقش کلیدی مرکز درمانی.",
       "fullDescription": [
