@@ -7,7 +7,7 @@
     "year": "2025",
     "coverImage": "/Gemini_Generated_Image_ccfr56ccfr56ccfr.jpg",
     "links": {
-      "github": "https://github.com/mohamadMehdiDabestani"
+      "github": "https://github.com/MohamadMehdiDabestani/trading-dashboard"
     },
     "technologies": [
       { "name": "Fastify", "category": "Backend" },
@@ -203,14 +203,14 @@
   {
     "id": "healthcare-management-system",
     "slug": "healthcare-management-system",
-    "featured": true,
+    "featured": false,
     "status": "production",
     "year": "2025",
     "coverImage": "https://lh3.googleusercontent.com/aida-public/AB6AXuADfSjw0H_VzjTXLdzNcLhSu4494QxRQMPkREEAAITXZjzk2ndlpo8sr7P9D1bzaDwAQESt0RutkHw36zMzPXxBbZQnAyEV8vbspExgQ9gUSJtdIRIiXbFchykHaxZPaTMGU_YHUrNTkk6fSOrRaXgmjT6cYhvZWhdgJMetuNDBGiGDA6NOZaKEls9NksLsB3323ntC5W5iTsORW9_kBlWVg2T1I8cdBGep69Q5-Y8t6NQ4t6a2q2zfVzaqZkC-BfHhuWno3qXuea4",
     "links": {
       "live": "https://hospital.runflare.run",
       "video": "https://www.aparat.com/v/lfvpbcn",
-      "github": "https://github.com/mohamadMehdiDabestani"
+      "github": "https://github.com/MohamadMehdiDabestani/hopital"
     },
     "technologies": [
       { "name": "Next.js (App Router)", "category": "Core" },

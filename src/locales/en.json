@@ -1,4 +1,10 @@
 {
+  "meta": {
+    "homeTitle": "Mohammad Mehdi | Full Stack JS Developer (Fastify, Next.js, Drizzle, CASL)",
+    "homeDescription": "Portfolio of Mohammad Mehdi — Full Stack JavaScript Developer specialized in Fastify backends, Next.js BFF architecture, Drizzle ORM, and real-time systems.",
+    "homeKeywords": "Mohammad Mehdi, Full Stack JS Developer, Fastify, Next.js, BFF Architecture, Drizzle ORM, CASL, React 19, TypeScript, Real-time",
+    "siteName": "Mohammad Mehdi — Full Stack Developer"
+  },
   "nav": {
     "projects": "Projects",
     "about": "About",

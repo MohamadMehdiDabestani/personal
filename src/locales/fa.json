@@ -1,4 +1,10 @@
 {
+  "meta": {
+    "homeTitle": "محمد مهدی | توسعه‌دهنده Full Stack JS (Fastify, Next.js, Drizzle, CASL)",
+    "homeDescription": "پورتفولیو و نمونه کارهای محمد مهدی، توسعه‌دهنده فول‌استک جاوااسکریپت با تخصص در Fastify، معماری Next.js BFF، دیتابیس Drizzle ORM و سیستم‌های بلادرنگ.",
+    "homeKeywords": "محمد مهدی, توسعه دهنده Full Stack JS, Fastify, Next.js, BFF, Drizzle ORM, CASL, React, TypeScript, Real-time",
+    "siteName": "محمد مهدی — توسعه‌دهنده فول‌استک"
+  },
   "nav": {
     "projects": "پروژه‌ها",
     "about": "درباره من",

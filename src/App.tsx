@@ -10,6 +10,7 @@ import { Skills } from "./components/sections/Skills";
 import { Contact } from "./components/sections/Contact";
 import { motion, AnimatePresence } from "motion/react";
 import { projectsData } from "./types/project";
+import { useDocumentMetadata } from "./hooks/useDocumentMetadata";
 
 function parseProjectSlugFromHash(hash: string): string | null {
   if (hash.startsWith("#/projects/")) {
@@ -22,6 +23,8 @@ export default function App() {
   const [activeProjectSlug, setActiveProjectSlug] = useState<string | null>(() =>
     parseProjectSlugFromHash(window.location.hash)
   );
+
+  useDocumentMetadata(activeProjectSlug);
 
   useEffect(() => {
     const handleHashChange = () => {
