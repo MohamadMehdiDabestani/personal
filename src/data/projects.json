@@ -1,0 +1,400 @@
+[
+  {
+    "id": "crypto-trading-engine-dashboard",
+    "slug": "crypto-trading-engine-dashboard",
+    "featured": true,
+    "status": "completed",
+    "year": "2025",
+    "coverImage": "/Gemini_Generated_Image_ccfr56ccfr56ccfr.jpg",
+    "links": {
+      "github": "https://github.com/mohamadMehdiDabestani"
+    },
+    "technologies": [
+      { "name": "Fastify", "category": "Backend" },
+      { "name": "In-Memory B-Tree Engine", "category": "Core" },
+      { "name": "BFF Architecture", "category": "Frontend" },
+      { "name": "Next.js 16 (App Router)", "category": "Frontend" },
+      { "name": "TypeScript", "category": "Core" },
+      { "name": "PostgreSQL", "category": "Database" },
+      { "name": "Drizzle ORM", "category": "Database" },
+      { "name": "WebSockets & EventBus", "category": "Real-time" },
+      { "name": "Big.js & 18-Decimals BigInt", "category": "Core" },
+      { "name": "Double-Entry Ledger", "category": "Backend" },
+      { "name": "CASL (Authorization)", "category": "Backend" },
+      { "name": "TanStack Query & Store", "category": "State" },
+      { "name": "useSyncExternalStore", "category": "State" },
+      { "name": "Binance WS Price Feed", "category": "Real-time" },
+      { "name": "Market Maker Engine", "category": "Backend" },
+      { "name": "TradingView Widgets", "category": "UI" },
+      { "name": "Tailwind CSS v4 & Shadcn UI", "category": "UI" },
+      { "name": "Turborepo", "category": "Tooling" }
+    ],
+    "en": {
+      "title": "High-Performance Crypto Trading Engine & Real-Time Dashboard",
+      "subtitle": "An architectural demo focusing on in-memory B-Tree order matching, high-throughput WebSocket streams, double-entry ledger, and Next.js BFF",
+      "role": "Lead Full Stack & Systems Engineer",
+      "timeline": "2024 – 2025",
+      "category": "Fintech / Trading Infrastructure",
+      "shortDescription": "A high-performance trading platform demo built as an architectural proof-of-concept. Engineered specifically to solve low-latency order matching, high-frequency real-time WebSocket pipelines, financial ledger integrity, and Next.js BFF decoupling without the unbounded scope of commercial exchange operations.",
+      "fullDescription": [
+        "Architected and implemented a high-performance crypto spot trading platform demo. Recognizing that building an exhaustive commercial cryptocurrency exchange encompasses an endless scope of volatile business requirements (e.g. multi-chain custody, fiat banking gateways, regulatory compliance, futures/derivatives), this project deliberately functions as a focused architectural PoC targeting the core engineering bottlenecks of financial trading systems.",
+        "The core order matching engine is implemented in memory using logarithmic B-Trees (sorted-btree) for price levels, achieving O(log N) order placement and execution alongside O(1) user-order tracking. Financial integrity is preserved using an 18-decimal fixed-point BigInt scaling system with Big.js and an immutable Double-Entry Ledger with database Unit of Work transactions.",
+        "The real-time data pipeline features a Fastify WebSocket server with backpressure management, heartbeat watchdog, and throttled orderbook snapshots (200ms) to prevent UI thread starvation. The frontend leverages Next.js App Router as a dedicated BFF (Backend-For-Frontend) layer, pairing React 19 and useSyncExternalStore with reference-counted WebSocket subscriptions and TanStack Query state hydration."
+      ],
+      "metrics": [
+        { "label": "Matching Engine", "value": "O(log N) B-Tree", "detail": "In-memory order book & price level execution" },
+        { "label": "Precision Core", "value": "18-Decimals BigInt", "detail": "Zero floating-point inaccuracies with Big.js" },
+        { "label": "Real-Time Pipeline", "value": "200ms Throttled WS", "detail": "Backpressure-safe snapshot distribution" },
+        { "label": "Data Integrity", "value": "Double-Entry Ledger", "detail": "KeyedMutex & Unit-of-Work concurrency locks" }
+      ],
+      "roles": [
+        {
+          "id": "trader",
+          "title": "Trader / User",
+          "permissions": "Place limit & market orders, cancel active orders, stream real-time order books, inspect wallet balances, and track trade histories."
+        },
+        {
+          "id": "market-maker",
+          "title": "Automated Market Maker (AMM)",
+          "permissions": "Continuous liquidity generation linked to Binance live WebSocket price feeds with dynamic spread and requoting thresholds."
+        },
+        {
+          "id": "admin",
+          "title": "System Auditor (Admin)",
+          "permissions": "Full administrative governance, CASL role and ability management, engine bootstrap verification, and ledger reconciliation."
+        }
+      ],
+      "features": [
+        {
+          "title": "In-Memory B-Tree Matching Engine",
+          "description": "Custom matching engine utilizing B-Trees for bids and asks, providing fast price-time priority matching, multi-tier user order indices, and zero-allocation execution loops."
+        },
+        {
+          "title": "High-Throughput WebSocket Pipeline & Throttling",
+          "description": "Event-driven Fastify WebSocket hub distributing real-time tickers and throttled 200ms orderbook snapshots with client-side reference counting via useSyncExternalStore."
+        },
+        {
+          "title": "Next.js BFF (Backend-For-Frontend) Architecture",
+          "description": "Dedicated Next.js layer isolating the frontend from internal backend microservices, handling SSR prefetching, secure cookie/session proxying, and client cache revalidation."
+        },
+        {
+          "title": "Financial Ledger & Concurrency Isolation",
+          "description": "Strict double-entry bookkeeping ledger backed by PostgreSQL and Drizzle ORM, serialized per-symbol using KeyedMutex locks to eliminate race conditions and double-spending."
+        },
+        {
+          "title": "Binance Live Price Feed & Autonomous Market Maker",
+          "description": "Live Binance WebSocket consumer with watchdog reconnects powering an internal automated liquidity provider with configurable spreads and depth levels."
+        },
+        {
+          "title": "Modular Draggable Dashboard & TradingView Charts",
+          "description": "Customizable trader interface featuring DnD-Kit draggable panels, TradingView interactive charting, TanStack Tables, and Shadcn UI components."
+        }
+      ],
+      "challenges": [
+        {
+          "title": "In-Memory Matching Engine vs. Database Persistence Race Conditions",
+          "problem": "Fast in-memory order execution could fall out of sync with relational database writes, risking double-spending or cancellation races before settlement.",
+          "solution": "Engineered a two-phase settlement pipeline: initial balance reservation via a transactional Unit of Work, combined with a per-symbol KeyedMutex that serializes matching and DB persistence."
+        },
+        {
+          "title": "High-Frequency WebSocket Flooding & UI Frame Drops",
+          "problem": "Unregulated market event streams overwhelmed client browser main threads with excessive React renders and frame drops.",
+          "solution": "Implemented server-side 200ms orderbook snapshot throttling with backpressure checks on the Fastify WebSocket server, coupled with a reference-counted client socket store powered by useSyncExternalStore."
+        },
+        {
+          "title": "Floating-Point Calculation Inaccuracies in High-Precision Trading",
+          "problem": "Standard IEEE 754 floating-point numbers in JavaScript introduce rounding discrepancies that invalidate financial balances.",
+          "solution": "Standardized all mathematical calculations on 18-decimal fixed-point BigInt representation, paired with Big.js for safe mathematical evaluations across backend and frontend layers."
+        }
+      ],
+      "architecture": [
+        "In-memory high-performance matching engine written with TypeScript and sorted B-Trees (sorted-btree)",
+        "Fastify core backend delivering sub-millisecond route handling and backpressure-protected WebSocket streams",
+        "PostgreSQL relational persistence with type-safe Drizzle ORM and double-entry accounting ledger tables",
+        "Next.js 16 App Router operating as a secure BFF layer with Server Components, SSR hydration, and TanStack Query caching"
+      ]
+    },
+    "fa": {
+      "title": "پلتفرم معاملاتی و موتور مچینگ بلادرنگ رمزارز (پروژه دمو و معماری)",
+      "subtitle": "پیاده‌سازی متمرکز هسته مچینگ O(log N) بر پایه B-Tree، لایه BFF با Next.js، جریان استریم WebSocket و لجر حسابداری دوبل",
+      "role": "توسعه‌دهنده ارشد Full Stack و معمار سیستم",
+      "timeline": "۱۴۰۳ – ۱۴۰۴",
+      "category": "سیستم‌های مالی / زیرساخت معاملاتی",
+      "shortDescription": "یک پروژه دمو و اثبات مفهوم (PoC) با تمرکز تخصصی بر معماری هسته معاملات رمزارز؛ شامل موتور مچینگ B-Tree درون حافظه، خط لوله وب‌سوکت پرسرعت با کنترل فشار معکوس، دفاتر کل حسابداری دوبل و لایه BFF در Next.js 16 بدون ورود به فیچرهای بی‌پایان یک صرافی تجاری.",
+      "fullDescription": [
+        "طراحی و پیاده‌سازی زیرساخت فنی یک سامانه معاملاتی (Spot Trading) به صورت یک پروژه دمو و اثبات مفهوم معماری (Architectural PoC). با توجه به اینکه پیاده‌سازی تمامی بخش‌های یک صرافی رمزارز واقعی (مانند نودهای بلاکچین، احراز هویت چندمرحله‌ای، درگاه‌های فیات، ابزارهای مارجین و استیکینگ) موضوعی بسیار فرار، وسیع و پروژه‌ای عملاً بی‌پایان است، در این پروژه آگاهانه از فیچرهای جانبی صرف‌نظر شده و تمرکز ۱۰۰٪ روی هسته مچینگ، جریان داده زنده، پایداری مالی و مقیاس‌پذیری بالا قرار گرفته است.",
+        "موتور مچینگ سفارشات (Matching Engine) در حافظه و با ساختار داده درخت B-Tree (با پیچیدگی زمانی O(log N)) پیاده‌سازی شده تا ثبت و اجرای اردرها با کمترین سربار انجام شود و ایندکس مجزای کاربران دسترسی O(1) به سفارش‌های فعال را ممکن سازد. برای حفظ صحت داده‌های مالی، از سیستم مقیاس‌بندی ۱۸ رقمی با BigInt و کتابخانه Big.js به همراه سیستم دفتر کل دوطرفه (Double-Entry Ledger) و الگوی Unit of Work استفاده شده است.",
+        "جریان داده بلادرنگ سیستم با وب‌سوکت‌های Fastify، پایش مداوم Heartbeat و مکانیزم کنترل فشار معکوس پیاده شده که با فشرده‌سازی و ارسال دوره‌ای اسنپ‌شات‌ها (Throttle ۲۰۰ میلی‌ثانیه‌ای) مانع از افت فریم کلاینت می‌شود. در فرانت‌اند نیز Next.js به عنوان لایه اختصاصی BFF عمل کرده و با مدیریت هوشمند سشن‌ها، SSR و استور بلادرنگ مبتنی بر useSyncExternalStore، نهایت سرعت را برای تریدر فراهم می‌سازد."
+      ],
+      "metrics": [
+        { "label": "موتور مچینگ", "value": "O(log N) B-Tree", "detail": "دفتر سفارشات و تطبیق قیمت در حافظه" },
+        { "label": "دقت محاسبات", "value": "BigInt ۱۸ رقمی", "detail": "حذف خطای ممیز شناور مالی با Big.js" },
+        { "label": "جریان بلادرنگ", "value": "سوکت با Throttle ۲۰۰ms", "detail": "ارسال ایمن اسنپ‌شات بدون قفل شدن کلاینت" },
+        { "label": "امنیت داده‌ها", "value": "Double-Entry Ledger", "detail": "کنترل همزمانی با KeyedMutex و UoW" }
+      ],
+      "roles": [
+        {
+          "id": "trader",
+          "title": "معامله‌گر (Trader)",
+          "permissions": "ثبت سفارشات آنی (Market) و محدود (Limit)، لغو سفارشات باز، مشاهده زنده اردربوک، بررسی مانده کیف پول و تاریخچه معاملات."
+        },
+        {
+          "id": "market-maker",
+          "title": "بازارساز خودکار (Market Maker)",
+          "permissions": "تزریق پیوسته نقدینگی بر اساس فید زنده قیمت بایننس با محاسبه داینامیک اسپرد و گام‌های سفارش‌گذاری."
+        },
+        {
+          "id": "admin",
+          "title": "مدیر سیستم و حسابرس (Admin)",
+          "permissions": "نظارت بر وضعیت موتور مچینگ، بررسی تراز مالی لجر، مدیریت سطوح دسترسی CASL و مانیتورینگ رویدادهای سیستم."
+        }
+      ],
+      "features": [
+        {
+          "title": "موتور مچینگ اختصاصی مبتنی بر درخت B-Tree در حافظه",
+          "description": "پیاده‌سازی اردربوک دوطرفه در حافظه با درخت‌های متوازن B-Tree، تطابق سفارشات بر اساس اولویت قیمت و زمان و دسترسی O(1) به سفارشات هر کاربر."
+        },
+        {
+          "title": "جریان بلادرنگ وب‌سوکت با مکانیزم Throttle و Throttled Snapshot",
+          "description": "توزیع بدون وقفه تیکرها و ارسال اسنپ‌شات‌های دفتر سفارشات با محدودکننده ۲۰۰ میلی‌ثانیه‌ای جهت محافظت از منابع پردازشی مرورگر کاربر."
+        },
+        {
+          "title": "الگوی معماری BFF (Backend for Frontend) با Next.js 16",
+          "description": "جداسازی کامل کلاینت از میکروسرویس‌های داخلی با Next.js App Router برای مدیریت احراز هویت، پیش‌بارگذاری داده‌ها در SSR و کش هوشمند."
+        },
+        {
+          "title": "دفتر کل حسابداری دوبل و کنترل همزمانی با KeyedMutex",
+          "description": "حفظ صحت کامل تراکنش‌های مالی با معماری Double-Entry Ledger و قفل‌گذاری روی نمادها به کمک KeyedMutex جهت جلوگیری از Race Condition و دابل‌اسپندینگ."
+        },
+        {
+          "title": "اتصال به فید لحظه‌ای بایننس و موتور بازارساز هوشمند",
+          "description": "اتصال زنده به WebSocket بایننس با مکانیزم Watchdog و بازتولید عمق بازار از طریق ربات Market Maker برای شبیه‌سازی شرایط واقعی ترید."
+        },
+        {
+          "title": "داشبورد ماژولار ترید با قابلیت شخصی‌سازی و چارت‌های TradingView",
+          "description": "رابط کاربری مدرن با پنل‌های Drag-and-Drop به کمک DnD-Kit، ویجت‌های تعاملی تریدینگ‌ویو، جداول پیشرفته TanStack و کامپوننت‌های Shadcn."
+        }
+      ],
+      "challenges": [
+        {
+          "title": "ناهماهنگی بین سرعت مچینگ در حافظه و ذخیره‌سازی در دیتابیس",
+          "problem": "سرعت فوق‌العاده مچینگ در حافظه می‌توانست قبل از اتمام تراکنش‌های سنگین دیتابیس، در اثر لغو یا ثبت سفارش جدید باعث خطای Race Condition شود.",
+          "solution": "جداسازی عملیات به رزرو اولیه در دیتابیس و اجرای سریالی مچینگ و ثبت در دیتابیس به ازای هر مارکت با استفاده از ساختار KeyedMutex."
+        },
+        {
+          "title": "افت فریم و هنگ کردن UI بر اثر بمباران رویدادهای وب‌سوکت",
+          "problem": "دریافت صدها رویداد تغییر اردربوک در ثانیه باعث رندرهای پیاپی در React و قفل شدن تب مرورگر کاربر می‌شد.",
+          "solution": "پیاده‌سازی مکانیزم Throttled Snapshot روی سرور با بازه ۲۰۰ms همراه با استفاده از useSyncExternalStore و سیستم Reference Counting روی اتصالات سمت فرانت‌اند."
+        },
+        {
+          "title": "خطاهای محاسبات مالی ناشی از اعشار در جاوااسکریپت",
+          "problem": "اعداد اعشاری ممیز شناور (Float) در جاوااسکریپت منجر به خطاهای گردکردن و عدم تعادل حساب‌ها در حجم‌های بالای تراکنش می‌شدند.",
+          "solution": "تبدیل تمامی مقادیر مالی به BigInt با دقت ۱۸ رقم اعشار و بهره‌گیری از Big.js در لایه‌های محاسباتی بک‌اند و فرانت‌اند برای تضمین خطای صفر در ترازها."
+        }
+      ],
+      "architecture": [
+        "موتور مچینگ درون‌حافظه‌ای با درخت‌های B-Tree (کتابخانه sorted-btree) و اولویت‌بندی Price-Time",
+        "بک‌اند پرسرعت Fastify با پایداری وب‌سوکت، کنترل بافرینگ و سیستم انتشار رویداد EventBus",
+        "پایگاه داده PostgreSQL با مدل‌سازی اسکیمای کاملاً ایمن در Drizzle ORM و جداول لجر دوطرفه",
+        "لایه BFF با Next.js 16 App Router برای ارکستراسیون درخواست‌ها، SSR بهینه و مدیریت استیت با TanStack Query و Store"
+      ]
+    }
+  },
+  {
+    "id": "healthcare-management-system",
+    "slug": "healthcare-management-system",
+    "featured": true,
+    "status": "production",
+    "year": "2025",
+    "coverImage": "https://lh3.googleusercontent.com/aida-public/AB6AXuADfSjw0H_VzjTXLdzNcLhSu4494QxRQMPkREEAAITXZjzk2ndlpo8sr7P9D1bzaDwAQESt0RutkHw36zMzPXxBbZQnAyEV8vbspExgQ9gUSJtdIRIiXbFchykHaxZPaTMGU_YHUrNTkk6fSOrRaXgmjT6cYhvZWhdgJMetuNDBGiGDA6NOZaKEls9NksLsB3323ntC5W5iTsORW9_kBlWVg2T1I8cdBGep69Q5-Y8t6NQ4t6a2q2zfVzaqZkC-BfHhuWno3qXuea4",
+    "links": {
+      "live": "https://hospital.runflare.run",
+      "video": "https://www.aparat.com/v/lfvpbcn",
+      "github": "https://github.com/mohamadMehdiDabestani"
+    },
+    "technologies": [
+      { "name": "Next.js (App Router)", "category": "Core" },
+      { "name": "TypeScript", "category": "Core" },
+      { "name": "PostgreSQL", "category": "Database" },
+      { "name": "Drizzle ORM", "category": "Database" },
+      { "name": "Socket.IO", "category": "Real-time" },
+      { "name": "Server-Sent Events (SSE)", "category": "Real-time" },
+      { "name": "Zustand", "category": "State" },
+      { "name": "SWR", "category": "State" },
+      { "name": "Material UI (MUI)", "category": "UI" },
+      { "name": "Excel Import/Export", "category": "Tooling" }
+    ],
+    "en": {
+      "title": "Smart Healthcare & Clinic Management System",
+      "subtitle": "Enterprise-grade real-time medical workflow & multi-role clinic platform",
+      "role": "Lead Full-Stack / Next.js Developer",
+      "timeline": "2024 – 2025",
+      "category": "Enterprise SaaS / Healthcare",
+      "shortDescription": "A high-performance enterprise healthcare platform featuring PostgreSQL with Drizzle ORM, instant patient queue & prescription updates via Socket.IO and SSE, bulk Excel data pipelines, and fine-grained Role-Based Access Control (RBAC) across 4 clinical departments.",
+      "fullDescription": [
+        "Designed and engineered a comprehensive Smart Healthcare Management System built from the ground up on the Next.js App Router. The platform digitizes the entire clinical lifecycle—from patient admission and triage to doctor examination, digital prescriptions, pharmacy dispensing, and executive analytics.",
+        "In busy medical centers, delays of even a few seconds or stale page data can disrupt patient flow. By combining Server-Side Rendering (SSR) with dual real-time channels (Socket.IO & Server-Sent Events), every department screen stays synchronized in sub-second latency without manual page refreshes.",
+        "Data integrity and security are enforced at both the route level and database query layer using Drizzle ORM and PostgreSQL, ensuring each staff role only accesses and mutates authorized clinical records."
+      ],
+      "metrics": [
+        { "label": "Access Roles", "value": "4 Tiers", "detail": "Manager, Doctor, Pharmacy, Admission" },
+        { "label": "Sync Latency", "value": "< 100ms", "detail": "Live queue & status updates via Socket.IO / SSE" },
+        { "label": "Data Pipeline", "value": "Excel I/O", "detail": "Bulk patient & inventory import/export" },
+        { "label": "Architecture", "value": "App Router", "detail": "Hybrid SSR + Client state with Zustand & SWR" }
+      ],
+      "roles": [
+        {
+          "id": "manager",
+          "title": "Clinic Manager (Admin)",
+          "permissions": "Full system oversight, staff role management, financial & operational analytics, audit logs, and bulk Excel reporting."
+        },
+        {
+          "id": "admission",
+          "title": "Admission & Reception",
+          "permissions": "Rapid patient onboarding, insurance verification, appointment queuing, and instant routing to active doctors."
+        },
+        {
+          "id": "doctor",
+          "title": "Doctor & Specialist",
+          "permissions": "Real-time waiting room queue, electronic medical records (EMR) history, digital diagnosis, and instant prescription dispatch."
+        },
+        {
+          "id": "medicine",
+          "title": "Pharmacy & Medicine",
+          "permissions": "Live incoming prescription stream, drug inventory tracking, dosage verification, and dispensation status updates."
+        }
+      ],
+      "features": [
+        {
+          "title": "Multi-Tier Role-Based Access Control (RBAC)",
+          "description": "Dedicated workspaces and strict server-side permission guards for Manager, Doctor, Medicine (Pharmacy), and Admission roles."
+        },
+        {
+          "title": "Real-Time Clinical Synchronization",
+          "description": "Instantaneous updates for patient queue transitions, doctor calls, and pharmacy prescriptions powered by Socket.IO and Server-Sent Events (SSE)."
+        },
+        {
+          "title": "Bulk Excel Import & Export Engine",
+          "description": "Seamless spreadsheet parsing and generation for migrating legacy patient records, drug inventories, and exporting financial reports."
+        },
+        {
+          "title": "Relational Data Layer with PostgreSQL & Drizzle",
+          "description": "Type-safe SQL schemas, relational integrity across patients, visits, and prescriptions, and optimized indexed queries."
+        },
+        {
+          "title": "Fully Responsive Clinical UI",
+          "description": "Ergonomic interface built with Material UI (MUI), tailored for high-density desktop monitors at reception as well as tablets for doctors on the move."
+        }
+      ],
+      "challenges": [
+        {
+          "title": "Preventing Stale State Across Concurrent Clinical Stations",
+          "problem": "When Reception admits a patient or a Doctor submits a prescription, other stations (Doctor's queue or Pharmacy) risked viewing outdated lists or double-processing records.",
+          "solution": "Implemented an event-driven architecture combining Socket.IO rooms per department and SSE streams, paired with SWR cache invalidation and Zustand optimistic UI updates."
+        },
+        {
+          "title": "Strict Multi-Role Security in Next.js App Router",
+          "problem": "Protecting sensitive medical records across Server Components, Server Actions, and API routes without degrading page transition speed.",
+          "solution": "Architected a unified RBAC middleware and DAL (Data Access Layer) verifier that validates session tokens and role scopes (`manager`, `doctor`, `medicine`, `admission`) before executing any Drizzle ORM query."
+        },
+        {
+          "title": "Handling Large Excel Datasets Without Blocking the UI",
+          "problem": "Medical centers needed to import/export thousands of medicine items and patient histories from Excel files, which could freeze the browser thread or timeout requests.",
+          "solution": "Built a streamed validation and batch-insertion pipeline that sanitizes rows, reports schema errors clearly to the operator, and commits records in safe PostgreSQL transactions."
+        }
+      ],
+      "architecture": [
+        "Next.js App Router with Server Components for fast initial load and SEO/security boundaries",
+        "PostgreSQL relational schema managed via type-safe Drizzle ORM migrations",
+        "Dual real-time transport layer supporting both bidirectional Socket.IO events and lightweight SSE streams",
+        "Client-side state orchestration combining Zustand for UI/session state and SWR for server cache synchronization"
+      ]
+    },
+    "fa": {
+      "title": "سامانه جامع مدیریت هوشمند مراکز درمانی",
+      "subtitle": "پلتفرم سازمانی و بلادرنگ مدیریت کلینیک، پذیرش، پزشکان و داروخانه با کنترل دسترسی چندسطحی",
+      "role": "توسعه‌دهنده ارشد فول‌استک / Next.js",
+      "timeline": "۱۴۰۳ – ۱۴۰۴",
+      "category": "سامانه سازمانی / سلامت دیجیتال",
+      "shortDescription": "یک راهکار سازمانی پرسرعت با دیتابیس PostgreSQL و Drizzle ORM، بروزرسانی لحظه‌ای نوبت‌ها و نسخه‌ها با Socket.IO و SSE، قابلیت درون‌ریزی و برون‌بری اکسل (Excel Import/Export) و سیستم کنترل دسترسی دقیق (RBAC) برای ۴ نقش کلیدی مرکز درمانی.",
+      "fullDescription": [
+        "طراحی و پیاده‌سازی صفر تا صد سامانه جامع مدیریت هوشمند مراکز درمانی بر پایه معماری مدرن Next.js App Router. این پلتفرم تمام چرخه عملیاتی یک مرکز درمانی را از لحظه پذیرش بیمار و تشکیل پرونده تا معاینه پزشک، صدور نسخه الکترونیک، تحویل دارو در داروخانه و گزارش‌گیری مدیریتی به‌صورت یکپارچه دیجیتال می‌کند.",
+        "در محیط‌های پرترافیک درمانی، تأخیر چند ثانیه‌ای یا عدم همگام‌سازی داده‌ها بین بخش پذیرش، اتاق پزشک و داروخانه باعث اختلال در صف بیماران می‌شود. با ترکیب رندرینگ سمت سرور (SSR) و ارتباط بلادرنگ دوگانه (Socket.IO و SSE)، تمامی پنل‌ها بدون نیاز به رفرش صفحه در کسری از ثانیه با هم سینک می‌شوند.",
+        "امنیت داده‌های پزشکی و یکپارچگی اطلاعات در سطح مسیرها (Routes) و لایه دیتابیس با استفاده از PostgreSQL و Drizzle ORM تضمین شده است تا هر نقش کاربری صرفاً به اطلاعات و عملیات مجاز خود دسترسی داشته باشد."
+      ],
+      "metrics": [
+        { "label": "سطوح دسترسی", "value": "۴ نقش مجزا", "detail": "مدیر، پزشک، داروخانه و پذیرش" },
+        { "label": "بروزرسانی لحظه‌ای", "value": "< ۱۰۰ms", "detail": "همگام‌سازی زنده با Socket.IO و SSE" },
+        { "label": "مدیریت داده‌ها", "value": "Excel I/O", "detail": "Import و Export گروهی اطلاعات با اکسل" },
+        { "label": "معماری هسته", "value": "App Router", "detail": "ترکیب SSR با Zustand، SWR و Drizzle" }
+      ],
+      "roles": [
+        {
+          "id": "manager",
+          "title": "مدیر مرکز (Manager)",
+          "permissions": "نظارت کامل بر عملکرد کلینیک، مدیریت کاربران و نقش‌ها، داشبوردهای آماری و مالی، و خروجی/ورودی اکسل کل سیستم."
+        },
+        {
+          "id": "admission",
+          "title": "پذیرش (Admission)",
+          "permissions": "ثبت سریع مشخصات بیمار، تشکیل پرونده، مدیریت صف انتظار و ارجاع آنی بیمار به اتاق پزشک مربوطه."
+        },
+        {
+          "id": "doctor",
+          "title": "پزشک (Doctor)",
+          "permissions": "مشاهده زنده لیست بیماران منتظر، بررسی سوابق درمانی، ثبت شرح حال و ارسال آنی نسخه به بخش داروخانه."
+        },
+        {
+          "id": "medicine",
+          "title": "داروخانه و دارو (Medicine)",
+          "permissions": "دریافت بلادرنگ نسخه‌های ثبت‌شده توسط پزشک، مدیریت موجودی داروها و ثبت وضعیت تحویل دارو به بیمار."
+        }
+      ],
+      "features": [
+        {
+          "title": "سیستم کنترل دسترسی چندسطحی پیشرفته (RBAC)",
+          "description": "تفکیک دقیق پنل‌ها و مجوزهای عملیاتی برای ۴ سطح دسترسی مختلف شامل مدیر (Manager)، پزشک (Doctor)، داروخانه (Medicine) و پذیرش (Admission)."
+        },
+        {
+          "title": "بروزرسانی لحظه‌ای داده‌ها با Socket.IO و SSE",
+          "description": "اعلان و همگام‌سازی آنی وضعیت پذیرش بیمار، فراخوانی نوبت پزشک و ارسال نسخه به داروخانه بدون نیاز به بارگذاری مجدد صفحه."
+        },
+        {
+          "title": "پیاده‌سازی کامل Import / Export اکسل",
+          "description": "قابلیت ورود دسته‌جمعی لیست داروها و پرونده‌ها از فایل Excel و دریافت خروجی‌های ساختاریافته اکسل برای گزارش‌های مدیریتی و حسابداری."
+        },
+        {
+          "title": "لایه داده رابطه‌ای قدرتمند با PostgreSQL و Drizzle",
+          "description": "طراحی اسکیمای کاملاً Type-safe با Drizzle ORM روی دیتابیس PostgreSQL برای تضمین صحت تراکنش‌های پزشکی و سرعت بالای کوئری‌ها."
+        },
+        {
+          "title": "طراحی کاملاً ریسپانسیو و بهینه برای محیط درمانی",
+          "description": "رابط کاربری مهندسی‌شده با MUI و Tailwind که هم روی مانیتورهای عریض بخش پذیرش و هم روی تبلت و موبایل پزشکان تجربه کاربری روانی ارائه می‌دهد."
+        }
+      ],
+      "challenges": [
+        {
+          "title": "همگام‌سازی بلادرنگ وضعیت بین ایستگاه‌های کاری مختلف",
+          "problem": "زمانی که بخش پذیرش بیماری را ثبت می‌کند یا پزشک نسخه‌ای صادر می‌کند، سایر بخش‌ها (اتاق پزشک یا داروخانه) نباید داده‌های قدیمی ببینند یا نیاز به رفرش دستی داشته باشند.",
+          "solution": "معماری رویدادمحور با ترکیب اتاق‌های Socket.IO و استریم‌های سبک SSE پیاده‌سازی شد که در کنار SWR و Zustand، کش کلاینت را در لحظه بروزرسانی می‌کند."
+        },
+        {
+          "title": "پیاده‌سازی امنیت چندسطحی (RBAC) در Next.js App Router",
+          "problem": "حفاظت از داده‌های حساس بیماران در Server Components و APIها به شکلی که هیچ کاربری نتواند به داده‌های نقش دیگر دسترسی پیدا کند و سرعت SSR نیز افت نکند.",
+          "solution": "طراحی لایه اعتبارسنجی متمرکز در سمت سرور که پیش از اجرای هر کوئری Drizzle، توکن نشست و سطح دسترسی نقش (`manager`, `doctor`, `medicine`, `admission`) را بررسی می‌کند."
+        },
+        {
+          "title": "پردازش فایل‌های حجیم Excel بدون قفل شدن رابط کاربری",
+          "problem": "مراکز درمانی برای انتقال لیست داروها و سوابق بیماران نیاز به Import و Export فایل‌های اکسل با تعداد سطر بالا داشتند که می‌توانست باعث کندی مرورگر یا خطای دیتابیس شود.",
+          "solution": "پیاده‌سازی مکانیزم اعتبارسنجی ساختاری سطرها و ثبت دسته‌ای (Batch Transaction) در PostgreSQL همراه با نمایش گزارش دقیق خطاها به کاربر."
+        }
+      ],
+      "architecture": [
+        "معماری Next.js App Router با بهره‌گیری حداکثری از Server Components برای امنیت و سرعت بارگذاری اولیه",
+        "مدیریت دیتابیس رابطه‌ای PostgreSQL با استفاده از Drizzle ORM و تایپ‌های سرتاسری TypeScript",
+        "لایه ارتباط بلادرنگ هیبریدی با پشتیبانی همزمان از Socket.IO و Server-Sent Events (SSE)",
+        "مدیریت وضعیت کلاینت با ترکیب هوشمندانه Zustand (وضعیت رابط کاربری) و SWR (همگام‌سازی کش سرور)"
+      ]
+    }
+  }
+]

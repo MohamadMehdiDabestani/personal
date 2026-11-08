@@ -4,68 +4,123 @@
     "about": "About",
     "skills": "Skills",
     "contact": "Contact",
-    "portfolio": "Portfolio"
+    "portfolio": "Mohammad Mehdi",
+    "backToHome": "Back to Portfolio"
   },
   "hero": {
-    "openToRemote": "Open to Remote",
-    "title": "Mohammad Mehdi — Next.js Developer",
-    "description": "Building fast, maintainable products with Next.js & TypeScript. Specialized in App Router, Performance, and Real-time systems.",
-    "viewCaseStudy": "View Featured Case Study",
-    "contact": "Contact Me"
+    "openToRemote": "Available for Remote Full-Time Roles",
+    "greeting": "Hi, I’m Mohammad Mehdi",
+    "title": "Full Stack JS Developer",
+    "subtitle": "High-throughput backends with Fastify, Drizzle & CASL, paired with Next.js BFF architecture.",
+    "description": "Full Stack JavaScript Developer with 5+ years of practical project experience since 2021. Specialized in building fast Node.js backends with Fastify & Drizzle ORM, granular authorization with CASL, and scalable frontend architectures with Next.js App Router following the BFF (Backend-for-Frontend) pattern.",
+    "viewCaseStudy": "Explore Featured Case Study",
+    "viewAllProjects": "Browse Projects",
+    "contact": "Get in Touch",
+    "stats": {
+      "experience": "5+ Years",
+      "experienceSub": "Hands-on since 2021",
+      "stack": "Full Stack JS",
+      "stackSub": "Fastify + Next.js",
+      "backend": "Fastify + Drizzle",
+      "backendSub": "PostgreSQL & CASL",
+      "bff": "BFF Architecture",
+      "bffSub": "Next.js App Router"
+    }
   },
   "availability": {
     "openToWork": "Open to Work",
-    "title": "Available for Remote Full-Time Roles",
-    "description": "I’m currently open to joining a product-focused team as a Next.js developer, with a preference for remote collaboration.",
-    "remoteOnly": "Remote only",
-    "fullTime": "Full-time preferred",
-    "contact": "Contact Me"
+    "title": "Ready to Join a Product-Focused Engineering Team",
+    "description": "I’m currently seeking a full-time remote role as a Full Stack JS Developer (Backend / Frontend / BFF) where architecture quality, speed, and clean code matter.",
+    "remoteOnly": "Remote Collaboration",
+    "fullTime": "Full-Time Preferred",
+    "contact": "Let’s Talk"
   },
   "featured": {
-    "title": "Featured Project",
-    "projectTitle": "Healthcare Management System",
-    "projectDesc": "A high-performance enterprise solution featuring a relational DB with PostgreSQL, real-time monitoring via WebSockets, and complex Role-Based Access Control (RBAC). Built entirely on the Next.js App Router for optimal Server-Side Rendering.",
-    "deepDive": "Deep Dive"
+    "badge": "Projects & Case Studies",
+    "title": "Selected Engineering Work",
+    "subtitle": "",
+    "featuredBadge": "Featured Case Study",
+    "deepDive": "Read Full Case Study",
+    "liveDemo": "Live Platform",
+    "videoReview": "Video Walkthrough",
+    "sourceCode": "GitHub",
+    "otherProjects": "More Projects & Architectures"
+  },
+  "projectDetail": {
+    "back": "Back to Overview",
+    "livePreview": "Open Live Application",
+    "watchVideo": "Watch Video Review (Aparat)",
+    "viewGithub": "GitHub Profile",
+    "overviewTitle": "Project Overview & Context",
+    "metricsTitle": "Key Engineering Metrics",
+    "technologiesTitle": "Technology Stack & Tooling",
+    "featuresTitle": "Key Features & Capabilities",
+    "rolesTitle": "Role-Based Access Control (RBAC)",
+    "rolesSubtitle": "Dedicated permission scopes and real-time views tailored to each operational role:",
+    "challengesTitle": "Engineering Challenges & Solutions",
+    "problemLabel": "The Challenge",
+    "solutionLabel": "Architectural Solution",
+    "architectureTitle": "System Architecture Highlights",
+    "nextProject": "Explore Another Project",
+    "ctaTitle": "Interested in how this was built?",
+    "ctaDesc": "Let’s discuss Fastify microservices, Next.js BFF architecture, RBAC access models, or how I can contribute to your team.",
+    "status": {
+      "production": "Live in Production",
+      "completed": "Completed",
+      "in-progress": "In Progress"
+    }
   },
   "skills": {
-    "title": "Core Skills",
-    "core": "Core",
-    "state": "State & Data",
-    "realtime": "Real-time",
-    "ui": "UI"
+    "badge": "Technical Arsenal",
+    "title": "Core Skills & Full Stack Stack",
+    "subtitle": "Modern JavaScript & TypeScript technologies across Backend, BFF, Frontend, and Real-Time systems.",
+    "backend": "Backend & Permissions",
+    "backendDesc": "High-performance Node.js APIs with Fastify, type-safe SQL with Drizzle ORM, and CASL abilities",
+    "frontend": "Frontend & BFF Architecture",
+    "frontendDesc": "Backend-for-Frontend orchestration with Next.js App Router, SSR, and React 19",
+    "realtime": "Real-Time & Streaming",
+    "realtimeDesc": "Sub-second bidirectional & server-push event pipelines with Socket.IO and SSE",
+    "uiState": "State Management & UI Systems",
+    "uiStateDesc": "Zustand, SWR, React Query, Tailwind CSS, Material UI, Shadcn UI, and Excel tooling"
   },
   "about": {
+    "badge": "Background & Philosophy",
     "title": "About Me",
-    "intro": "I’m a Next.js developer focused on building fast, maintainable web applications with strong attention to clean architecture, UX, and performance. My experience has been primarily project-based, and I’m currently looking for a full-time opportunity where I can contribute within a strong product or engineering team.",
+    "intro": "I’m a Full Stack JavaScript Developer with 5 years of practical, project-driven experience (since 2021). On the backend, I build high-throughput APIs using Fastify, relational data schemas with PostgreSQL and Drizzle ORM, and granular access control (RBAC/ABAC) using CASL. On the frontend, I apply the BFF (Backend-for-Frontend) pattern using Next.js App Router to deliver ultra-fast, real-time web products.",
     "bullets": [
-      "Strong with TypeScript and modern React patterns",
-      "Experience building real-time features with Socket.IO / SSE",
-      "Comfortable working with PostgreSQL and modern ORMs like Drizzle and Prisma",
-      "Familiar with RBAC, admin panels, and scalable frontend architecture",
-      "I care about accessibility, performance, and readable, maintainable code"
+      "High-performance backend development with Fastify, Node.js, and modular plugin architectures",
+      "Type-safe relational database design with PostgreSQL and modern Drizzle ORM & Prisma",
+      "Fine-grained authorization & permissions (RBAC/ABAC) using CASL across backend and frontend",
+      "Frontend architecture leveraging the BFF (Backend-for-Frontend) pattern with Next.js App Router & SSR",
+      "Production experience building real-time event-driven workflows with Socket.IO and SSE",
+      "Strong commitment to Web Performance, Accessibility, and clean, maintainable codebases"
     ],
-    "ctaPrimary": "View Case Study",
+    "ctaPrimary": "Explore Featured Case Study",
     "ctaSecondary": "Contact Me",
+    "quickFactsTitle": "At a Glance",
     "quickFacts": {
       "experienceLabel": "Experience",
-      "experienceValue": "Project-based since 2021",
-      "roleLabel": "Role preference",
-      "roleValue": "Full-time",
-      "modeLabel": "Work mode",
+      "experienceValue": "5 Years (Project-based since 2021)",
+      "roleLabel": "Target Role",
+      "roleValue": "Full Stack JS Developer",
+      "modeLabel": "Work Preference",
       "modeValue": "Remote",
-      "stackLabel": "Stack",
-      "stackValue": "Next.js, TypeScript, PostgreSQL"
+      "stackLabel": "Primary Stack",
+      "stackValue": "Fastify, Next.js (BFF), Drizzle, CASL, PostgreSQL"
     }
   },
   "contact": {
-    "title": "Contact Me",
-    "description": "I usually respond as soon as possible and I’m happy to connect regarding professional opportunities.",
+    "badge": "Get in Touch",
+    "title": "Let’s Build Something Great Together",
+    "description": "I respond quickly and I’m always happy to discuss full-time roles, technical interviews, or engineering collaborations.",
     "phone": "Phone",
     "email": "Email",
     "telegram": "Telegram",
-    "github": "GitHub"
+    "github": "GitHub",
+    "copySuccess": "Copied!",
+    "directAction": "Open"
   },
   "footer": {
-    "copyright": "© {{year}} Next.js Developer. All rights reserved."
+    "copyright": "© {{year}} Mohammad Mehdi — Full Stack JS Developer. Crafted with Fastify, Next.js, TypeScript & Tailwind CSS."
   }
 }

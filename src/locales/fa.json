@@ -4,68 +4,123 @@
     "about": "درباره من",
     "skills": "مهارت‌ها",
     "contact": "تماس با من",
-    "portfolio": "پورتفولیو"
+    "portfolio": "محمد مهدی",
+    "backToHome": "بازگشت به صفحه اصلی"
   },
   "hero": {
-    "openToRemote": "آماده همکاری ریموت",
-    "title": "محمد مهدی — توسعه‌دهنده Next.js",
-    "description": "توسعه محصولاتی سریع و قابل نگهداری با Next.js و TypeScript. متمرکز بر عملکرد، سیستم‌های بلادرنگ و App Router.",
-    "viewCaseStudy": "مشاهده نمونه پروژه",
-    "contact": "تماس با من"
+    "openToRemote": "آماده همکاری تمام‌وقت و ریموت",
+    "greeting": "سلام، من محمد مهدی هستم",
+    "title": "توسعه‌دهنده Full Stack JS",
+    "subtitle": "توسعه بک‌اند پرسرعت با Fastify و Drizzle، مدیریت دسترسی با CASL و معماری فرانت‌اند بر پایه BFF و Next.js.",
+    "description": "توسعه‌دهنده فول‌استک جاوااسکریپت با ۵ سال تجربه عملی و پروژه‌محور (از سال ۱۴۰۰). متخصص در توسعه بک‌اند با Fastify، دیتابیس PostgreSQL و Drizzle ORM، پیاده‌سازی کنترل دسترسی پیشرفته با CASL، و پیاده‌سازی معماری BFF (Backend for Frontend) با Next.js App Router.",
+    "viewCaseStudy": "بررسی جامع پروژه منتخب",
+    "viewAllProjects": "مشاهده پروژه‌ها",
+    "contact": "ارتباط با من",
+    "stats": {
+      "experience": "+۵ سال",
+      "experienceSub": "تجربه عملی از سال ۱۴۰۰",
+      "stack": "Full Stack JS",
+      "stackSub": "Fastify + Next.js",
+      "backend": "Fastify + Drizzle",
+      "backendSub": "PostgreSQL & CASL",
+      "bff": "معماری BFF",
+      "bffSub": "Next.js App Router"
+    }
   },
   "availability": {
     "openToWork": "آماده به کار",
-    "title": "در دسترس برای موقعیت‌های شغلی تمام‌وقت ریموت",
-    "description": "در حال حاضر آماده پیوستن به تیمی محصول‌محور به عنوان توسعه‌دهنده Next.js هستم و به همکاری دورکاری ترجیح می‌دهم.",
-    "remoteOnly": "فقط ریموت",
+    "title": "در دسترس برای موقعیت‌های شغلی تمام‌وقت و ریموت",
+    "description": "در حال حاضر آماده پیوستن به یک تیم فنی یا محصول‌محور حرفه‌ای به عنوان توسعه‌دهنده Full Stack JS (یا Backend / Frontend) هستم؛ با تسلط بر Fastify، Next.js و معماری BFF.",
+    "remoteOnly": "همکاری ریموت (دورکاری)",
     "fullTime": "تمام‌وقت",
-    "contact": "تماس با من"
+    "contact": "گفتگو کنیم"
   },
   "featured": {
-    "title": "پروژه منتخب",
-    "projectTitle": "سیستم مدیریت سلامت",
-    "projectDesc": "یک راهکار سازمانی قدرتمند با دیتابیس PostgreSQL، مانیتورینگ بلادرنگ با WebSockets و کنترل دسترسی پیچیده (RBAC). ساخته شده به‌طور کامل روی Next.js App Router برای حداکثر کردن مزایای SSR.",
-    "deepDive": "بررسی دقیق"
+    "badge": "پروژه‌ها و نمونه کارها",
+    "title": "پروژه‌های منتخب مهندسی",
+    "subtitle": "",
+    "featuredBadge": "پروژه ویژه (Case Study)",
+    "deepDive": "مشاهده جزئیات و بررسی فنی",
+    "liveDemo": "مشاهده آنلاین سایت",
+    "videoReview": "ویدیو بررسی و توضیحات",
+    "sourceCode": "گیت‌هاب",
+    "otherProjects": "سایر پروژه‌ها و معماری‌ها"
+  },
+  "projectDetail": {
+    "back": "بازگشت به لیست پروژه‌ها",
+    "livePreview": "مشاهده نسخه آنلاین (Live)",
+    "watchVideo": "تماشای ویدیو بررسی در آپارات",
+    "viewGithub": "پروفایل گیت‌هاب",
+    "overviewTitle": "معرفی و شرح کامل پروژه",
+    "metricsTitle": "شاخص‌های کلیدی و فنی",
+    "technologiesTitle": "تکنولوژی‌ها و ابزارهای استفاده‌شده",
+    "featuresTitle": "ویژگی‌ها و قابلیت‌های کلیدی",
+    "rolesTitle": "سطوح دسترسی و اعتبارسنجی (RBAC)",
+    "rolesSubtitle": "تفکیک دقیق دسترسی‌ها و رابط کاربری اختصاصی برای هر نقش در سیستم بر پایه قوانین RBAC:",
+    "challengesTitle": "چالش‌های فنی و راهکارهای مهندسی",
+    "problemLabel": "چالش و مسئله فنی",
+    "solutionLabel": "راهکار پیاده‌سازی‌شده",
+    "architectureTitle": "نکات برجسته معماری سیستم",
+    "nextProject": "مشاهده پروژه بعدی",
+    "ctaTitle": "علاقه‌مند به جزئیات فنی بیشتر هستید؟",
+    "ctaDesc": "خوشحال می‌شوم درباره میکروسرویس‌های Fastify، معماری Next.js BFF، قوانین دسترسی RBAC یا همکاری در تیم شما گفتگو کنیم.",
+    "status": {
+      "production": "فعال در محیط عملیاتی (Production)",
+      "completed": "تکمیل‌شده",
+      "in-progress": "در حال توسعه"
+    }
   },
   "skills": {
-    "title": "مهارت‌های کلیدی",
-    "core": "هسته",
-    "state": "مدیریت وضعیت و داده",
-    "realtime": "بلادرنگ",
-    "ui": "رابط کاربری"
+    "badge": "توانایی‌های فنی",
+    "title": "مهارت‌های کلیدی و استک فول‌استک",
+    "subtitle": "مجموعه ابزارها و تکنولوژی‌های مدرن اکوسیستم جاوااسکریپت در لایه‌های Backend، معماری BFF، فرانت‌اند و Real-Time.",
+    "backend": "بک‌اند و کنترل دسترسی",
+    "backendDesc": "سرویس‌های پرسرعت با Fastify، دیتابیس با Drizzle ORM و تعریف توانمندی‌ها با CASL",
+    "frontend": "فرانت‌اند و معماری BFF",
+    "frontendDesc": "پیاده‌سازی الگوی Backend-for-Frontend با Next.js App Router، رندرینگ SSR و React 19",
+    "realtime": "سیستم‌های بلادرنگ (Real-Time)",
+    "realtimeDesc": "همگام‌سازی لحظه‌ای داده‌ها با کمترین تأخیر از طریق Socket.IO و Server-Sent Events (SSE)",
+    "uiState": "مدیریت وضعیت و سیستم‌های رابط کاربری",
+    "uiStateDesc": "Zustand, SWR, React Query, Tailwind CSS, MUI, Shadcn UI و ابزارهای اکسل"
   },
   "about": {
+    "badge": "بیوگرافی و رویکرد فنی",
     "title": "درباره من",
-    "intro": "من توسعه‌دهنده Next.js هستم و روی ساخت وب‌اپلیکیشن‌های سریع و قابل‌نگهداری تمرکز دارم؛ با توجه ویژه به معماری تمیز، تجربه کاربری و عملکرد. تجربه من بیشتر به‌صورت پروژه‌محور بوده و در حال حاضر به دنبال یک فرصت تمام‌وقت هستم تا در یک تیم فنی یا محصول‌محور حرفه‌ای نقش مؤثری داشته باشم.",
+    "intro": "من توسعه‌دهنده Full Stack JS با ۵ سال تجربه عملی و پروژه‌محور (از ۱۴۰۰) هستم. در لایه بک‌اند روی ساخت سرویس‌های سریع و بهینه با Fastify، طراحی دیتابیس و کوئری‌های Type-safe با PostgreSQL و Drizzle ORM، و مدیریت سطوح دسترسی (RBAC/ABAC) با CASL تمرکز دارم. در لایه فرانت‌اند، با استفاده از الگوی معماری BFF (Backend for Frontend) و Next.js، وب‌اپلیکیشن‌های مقیاس‌پذیر و بلادرنگ توسعه می‌دهم.",
     "bullets": [
-      "تسلط خوب به TypeScript و الگوهای مدرن React",
-      "تجربه پیاده‌سازی قابلیت‌های Real-time با Socket.IO / SSE",
-      "تجربه کار با PostgreSQL و ORMهای مدرن مانند Drizzle و Prisma",
-      "آشنا با RBAC، پنل‌های مدیریتی و ساختاردهی مقیاس‌پذیر در فرانت‌اند",
-      "حساس به Accessibility، Performance و کدنویسی خوانا و قابل‌نگهداری"
+      "توسعه سرویس‌های پرسرعت و ماژولار بک‌اند با Fastify و Node.js",
+      "طراحی دیتابیس رابطه‌ای، مایگریشن و کوئری‌های بهینه با PostgreSQL و Drizzle ORM / Prisma",
+      "پیاده‌سازی سیستم‌های کنترل دسترسی پیشرفته (RBAC / ABAC) با CASL در لایه سرویس و کلاینت",
+      "معماری فرانت‌اند با الگوی BFF (Backend for Frontend) با استفاده از Next.js App Router و Server Components",
+      "پیاده‌سازی قابلیت‌های Real-time با Socket.IO و SSE برای همگام‌سازی لحظه‌ای داده‌ها",
+      "علاقه‌مند به معماری قابل‌نگهداری، بهینه‌سازی پرفورمنس (Performance) و کدنویسی تمیز"
     ],
-    "ctaPrimary": "مطالعه Case Study",
+    "ctaPrimary": "مشاهده پروژه منتخب (Case Study)",
     "ctaSecondary": "تماس با من",
+    "quickFactsTitle": "خلاصه وضعیت حرفه‌ای",
     "quickFacts": {
-      "experienceLabel": "نوع تجربه",
-      "experienceValue": "پروژه‌محور از ۱۴۰۰",
-      "roleLabel": "ترجیح شغلی",
-      "roleValue": "تمام‌وقت",
+      "experienceLabel": "سابقه فعالیت",
+      "experienceValue": "۵ سال تجربه عملی و پروژه‌محور (از ۱۴۰۰)",
+      "roleLabel": "موقعیت مدنظر",
+      "roleValue": "توسعه‌دهنده تمام‌وقت Full Stack JS",
       "modeLabel": "شیوه همکاری",
-      "modeValue": "ریموت",
-      "stackLabel": "استک اصلی",
-      "stackValue": "Next.js، TypeScript، PostgreSQL"
+      "modeValue": "ریموت (دورکاری)",
+      "stackLabel": "استک تخصصی",
+      "stackValue": "Fastify, Next.js (BFF), Drizzle, CASL, PostgreSQL"
     }
   },
   "contact": {
+    "badge": "راه‌های ارتباطی",
     "title": "تماس با من",
-    "description": "معمولاً در اسرع وقت پاسخ می‌دهم و خوشحال می‌شوم در زمینه فرصت‌های حرفه‌ای با شما در ارتباط باشم.",
+    "description": "در اسرع وقت پاسخگو هستم و خوشحال می‌شوم درباره فرصت‌های شغلی تمام‌وقت یا همکاری‌های فنی با شما گفتگو کنم.",
     "phone": "شماره تماس",
     "email": "ایمیل",
     "telegram": "تلگرام",
-    "github": "گیت‌هاب"
+    "github": "پروفایل گیت‌هاب",
+    "copySuccess": "کپی شد!",
+    "directAction": "مشاهده و ارتباط"
   },
   "footer": {
-    "copyright": "© {{year}} توسعه‌دهنده Next.js. تمامی حقوق محفوظ است."
+    "copyright": "© {{year}} محمد مهدی — توسعه‌دهنده Full Stack JS. تمامی حقوق محفوظ است."
   }
 }

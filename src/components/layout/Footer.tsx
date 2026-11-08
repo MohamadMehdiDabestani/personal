@@ -4,33 +4,35 @@ export function Footer() {
   const { t } = useTranslation();
 
   return (
-    <footer className="w-full py-section-md border-t border-outline-variant bg-background mt-auto">
-      <div className="max-w-[1120px] mx-auto flex flex-col md:flex-row justify-between items-center px-gutter-sm md:px-gutter-lg gap-base">
-        <div className="text-small text-on-surface-variant">
+    <footer className="w-full py-8 border-t border-outline-variant bg-background mt-auto">
+      <div className="max-w-[1160px] mx-auto flex flex-col md:flex-row justify-between items-center px-gutter-sm md:px-gutter-lg gap-4">
+        <div className="text-small text-on-surface-variant text-center md:text-start">
           {t("footer.copyright", { year: new Date().getFullYear() })}
         </div>
-        <div className="flex items-center gap-gutter-sm">
+
+        <div className="flex items-center gap-6" dir="ltr">
           <a
-            className="text-small text-on-surface-variant hover:text-primary transition-all duration-200"
-            href="#"
+            className="text-small text-on-surface-variant hover:text-primary transition-colors"
+            href="https://github.com/mohamadMehdiDabestani"
+            target="_blank"
+            rel="noreferrer"
           >
             GitHub
           </a>
           <a
-            className="text-small text-on-surface-variant hover:text-primary transition-all duration-200"
-            href="#"
+            className="text-small text-on-surface-variant hover:text-primary transition-colors"
+            href="https://t.me/ICT_user"
+            target="_blank"
+            rel="noreferrer"
           >
-            LinkedIn
+            Telegram
           </a>
           <a
-            className="text-small text-on-surface-variant hover:text-primary transition-all duration-200"
-            href="#"
+            className="text-small text-on-surface-variant hover:text-primary transition-colors"
+            href="mailto:mohammadmehdi1382mhd@gmail.com"
           >
-            Twitter
+            Email
           </a>
-        </div>
-        <div className="text-h3 text-on-background hidden md:block font-bold">
-          {t("nav.portfolio")}
         </div>
       </div>
     </footer>

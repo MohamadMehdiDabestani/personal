@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600;650;700&family=Vazirmatn:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600;650;700;800&family=Vazirmatn:wght@400;500;600;700;800&display=swap');
 @import "tailwindcss";
 
 :root {
@@ -13,17 +13,17 @@ html {
 }
 
 @theme {
-  --color-background: #11131a;
-  --color-on-background: #e1e2ec;
-  --color-surface: #11131a;
-  --color-on-surface: #e1e2ec;
-  --color-surface-variant: #32353c;
-  --color-on-surface-variant: #c2c6d6;
-  --color-surface-container-low: #191b22;
-  --color-outline-variant: #424753;
-  --color-primary: #afc6ff;
-  --color-on-primary: #002d6c;
-  --color-accent-soft: rgba(79, 140, 255, 0.12);
+  --color-background: #0b0d13;
+  --color-on-background: #eef0f8;
+  --color-surface: #12151f;
+  --color-on-surface: #eef0f8;
+  --color-surface-variant: #252a3a;
+  --color-on-surface-variant: #9ba3b8;
+  --color-surface-container-low: #161a26;
+  --color-outline-variant: #262b3d;
+  --color-primary: #7aa2f7;
+  --color-on-primary: #06142e;
+  --color-accent-soft: rgba(122, 162, 247, 0.12);
 
   --font-body: var(--font-family-app);
   --font-sans: var(--font-family-app);
@@ -33,51 +33,66 @@ html {
   --spacing-gutter-md: 24px;
   --spacing-gutter-lg: 32px;
   --spacing-section-sm: 40px;
-  --spacing-section-md: 48px;
-  --spacing-section-lg: 64px;
+  --spacing-section-md: 56px;
+  --spacing-section-lg: 80px;
 }
 
 @utility text-body {
   font-size: 18px;
-  line-height: 1.65;
+  line-height: 1.7;
   font-weight: 450;
 }
 @utility text-body-sm {
-  font-size: 16px;
-  line-height: 1.65;
+  font-size: 15.5px;
+  line-height: 1.7;
   font-weight: 450;
 }
 @utility text-h1 {
-  font-size: 48px;
-  line-height: 1.1;
-  font-weight: 700;
+  font-size: 52px;
+  line-height: 1.15;
+  font-weight: 800;
+  letter-spacing: -0.02em;
 }
 @utility text-h2 {
-  font-size: 32px;
-  line-height: 1.2;
-  font-weight: 650;
+  font-size: 34px;
+  line-height: 1.25;
+  font-weight: 700;
+  letter-spacing: -0.015em;
 }
 @utility text-h3 {
-  font-size: 22px;
-  line-height: 1.3;
+  font-size: 21px;
+  line-height: 1.35;
   font-weight: 600;
 }
 @utility text-h2-mobile {
-  font-size: 28px;
-  line-height: 1.2;
-  font-weight: 650;
+  font-size: 26px;
+  line-height: 1.25;
+  font-weight: 700;
 }
 @utility text-small {
-  font-size: 14px;
+  font-size: 13.5px;
   line-height: 1.55;
-  font-weight: 450;
+  font-weight: 500;
 }
 @utility text-h1-mobile {
-  font-size: 40px;
-  line-height: 1.1;
-  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.2;
+  font-weight: 800;
 }
 
 body {
-  @apply bg-background text-on-background font-body antialiased min-h-screen flex flex-col;
+  @apply bg-background text-on-background font-body antialiased min-h-screen flex flex-col selection:bg-primary/25 selection:text-primary;
+  background-image: 
+    radial-gradient(circle at 15% 10%, rgba(122, 162, 247, 0.08) 0%, transparent 35%),
+    radial-gradient(circle at 85% 25%, rgba(56, 189, 248, 0.05) 0%, transparent 35%),
+    radial-gradient(circle at 50% 80%, rgba(122, 162, 247, 0.05) 0%, transparent 40%);
+  background-attachment: fixed;
+}
+
+/* Subtle grid overlay helper */
+.bg-grid-pattern {
+  background-size: 36px 36px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
 }

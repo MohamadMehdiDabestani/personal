@@ -43,7 +43,7 @@ export function DownloadCV({ lang }: DownloadCVProps) {
     <DropdownMenu dir={activeLang === "fa" ? "rtl" : "ltr"}>
       <DropdownMenuTrigger asChild>
         <Button
-          className="group relative transition-all duration-300 hover:scale-105"
+          className="group relative transition-all duration-300 hover:scale-105 w-full sm:w-auto "
           aria-label={t.downloadCV}
         >
           {activeLang === "fa" ? (
