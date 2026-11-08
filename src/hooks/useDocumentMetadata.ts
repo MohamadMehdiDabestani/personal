@@ -39,7 +39,7 @@ export function useDocumentMetadata(activeProjectSlug: string | null) {
       const project = projectsData.find((p) => p.slug === activeProjectSlug);
       if (project) {
         const content = project[lang];
-        const siteAuthor = lang === "fa" ? "محمد مهدی" : "Mohammad Mehdi";
+        const siteAuthor = lang === "fa" ? "محمد مهدی دبستانی" : "Mohammad mehdi dabestani";
         title = `${content.title} | ${siteAuthor}`;
         description = content.shortDescription || content.subtitle;
         keywords = `${project.technologies.map((tech) => tech.name).join(", ")}, ${content.category}, ${siteAuthor}`;
@@ -65,7 +65,7 @@ export function useDocumentMetadata(activeProjectSlug: string | null) {
     // 2. Standard SEO meta tags
     setMetaTag("description", description);
     setMetaTag("keywords", keywords);
-    setMetaTag("author", "Mohammad Mehdi");
+    setMetaTag("author", "Mohammad mehdi dabestani");
     setMetaTag("robots", "index, follow");
 
     // 3. OpenGraph tags

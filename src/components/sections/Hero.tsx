@@ -127,7 +127,7 @@ export function Hero({ onSelectFeaturedProject }: HeroProps) {
               </div>
               <div className="pl-4">
                 <span className="text-slate-400">name:</span>{" "}
-                <span className="text-emerald-300">'Mohammad Mehdi'</span>,
+                <span className="text-emerald-300">'Mohammad mehdi dabestani'</span>,
               </div>
               <div className="pl-4">
                 <span className="text-slate-400">role:</span>{" "}

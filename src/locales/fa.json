@@ -1,21 +1,21 @@
 {
   "meta": {
-    "homeTitle": "محمد مهدی | توسعه‌دهنده Full Stack JS (Fastify, Next.js, Drizzle, CASL)",
-    "homeDescription": "پورتفولیو و نمونه کارهای محمد مهدی، توسعه‌دهنده فول‌استک جاوااسکریپت با تخصص در Fastify، معماری Next.js BFF، دیتابیس Drizzle ORM و سیستم‌های بلادرنگ.",
-    "homeKeywords": "محمد مهدی, توسعه دهنده Full Stack JS, Fastify, Next.js, BFF, Drizzle ORM, CASL, React, TypeScript, Real-time",
-    "siteName": "محمد مهدی — توسعه‌دهنده فول‌استک"
+    "homeTitle": "محمد مهدی دبستانی | توسعه‌دهنده Full Stack JS (Fastify, Next.js, Drizzle, CASL)",
+    "homeDescription": "پورتفولیو و نمونه کارهای محمد مهدی دبستانی، توسعه‌دهنده فول‌استک جاوااسکریپت با تخصص در Fastify، معماری Next.js BFF، دیتابیس Drizzle ORM و سیستم‌های بلادرنگ.",
+    "homeKeywords": "محمد مهدی دبستانی, توسعه دهنده Full Stack JS, Fastify, Next.js, BFF, Drizzle ORM, CASL, React, TypeScript, Real-time",
+    "siteName": "محمد مهدی دبستانی — توسعه‌دهنده فول‌استک"
   },
   "nav": {
     "projects": "پروژه‌ها",
     "about": "درباره من",
     "skills": "مهارت‌ها",
     "contact": "تماس با من",
-    "portfolio": "محمد مهدی",
+    "portfolio": "محمد مهدی دبستانی",
     "backToHome": "بازگشت به صفحه اصلی"
   },
   "hero": {
     "openToRemote": "آماده همکاری تمام‌وقت و ریموت",
-    "greeting": "سلام، من محمد مهدی هستم",
+    "greeting": "سلام، من محمد مهدی دبستانی هستم",
     "title": "توسعه‌دهنده Full Stack JS",
     "subtitle": "توسعه بک‌اند پرسرعت با Fastify و Drizzle، مدیریت دسترسی با CASL و معماری فرانت‌اند بر پایه BFF و Next.js.",
     "description": "توسعه‌دهنده فول‌استک جاوااسکریپت با ۵ سال تجربه عملی و پروژه‌محور (از سال ۱۴۰۰). متخصص در توسعه بک‌اند با Fastify، دیتابیس PostgreSQL و Drizzle ORM، پیاده‌سازی کنترل دسترسی پیشرفته با CASL، و پیاده‌سازی معماری BFF (Backend for Frontend) با Next.js App Router.",
@@ -127,6 +127,6 @@
     "directAction": "مشاهده و ارتباط"
   },
   "footer": {
-    "copyright": "© {{year}} محمد مهدی — توسعه‌دهنده Full Stack JS. تمامی حقوق محفوظ است."
+    "copyright": "© {{year}} محمد مهدی دبستانی — توسعه‌دهنده Full Stack JS. تمامی حقوق محفوظ است."
   }
 }

@@ -1,21 +1,21 @@
 {
   "meta": {
-    "homeTitle": "Mohammad Mehdi | Full Stack JS Developer (Fastify, Next.js, Drizzle, CASL)",
-    "homeDescription": "Portfolio of Mohammad Mehdi — Full Stack JavaScript Developer specialized in Fastify backends, Next.js BFF architecture, Drizzle ORM, and real-time systems.",
-    "homeKeywords": "Mohammad Mehdi, Full Stack JS Developer, Fastify, Next.js, BFF Architecture, Drizzle ORM, CASL, React 19, TypeScript, Real-time",
-    "siteName": "Mohammad Mehdi — Full Stack Developer"
+    "homeTitle": "Mohammad mehdi dabestani | Full Stack JS Developer (Fastify, Next.js, Drizzle, CASL)",
+    "homeDescription": "Portfolio of Mohammad mehdi dabestani — Full Stack JavaScript Developer specialized in Fastify backends, Next.js BFF architecture, Drizzle ORM, and real-time systems.",
+    "homeKeywords": "Mohammad mehdi dabestani, Full Stack JS Developer, Fastify, Next.js, BFF Architecture, Drizzle ORM, CASL, React 19, TypeScript, Real-time",
+    "siteName": "Mohammad mehdi dabestani — Full Stack Developer"
   },
   "nav": {
     "projects": "Projects",
     "about": "About",
     "skills": "Skills",
     "contact": "Contact",
-    "portfolio": "Mohammad Mehdi",
+    "portfolio": "Mohammad mehdi dabestani",
     "backToHome": "Back to Portfolio"
   },
   "hero": {
     "openToRemote": "Available for Remote Full-Time Roles",
-    "greeting": "Hi, I’m Mohammad Mehdi",
+    "greeting": "Hi, I’m Mohammad mehdi dabestani",
     "title": "Full Stack JS Developer",
     "subtitle": "High-throughput backends with Fastify, Drizzle & CASL, paired with Next.js BFF architecture.",
     "description": "Full Stack JavaScript Developer with 5+ years of practical project experience since 2021. Specialized in building fast Node.js backends with Fastify & Drizzle ORM, granular authorization with CASL, and scalable frontend architectures with Next.js App Router following the BFF (Backend-for-Frontend) pattern.",
@@ -127,6 +127,6 @@
     "directAction": "Open"
   },
   "footer": {
-    "copyright": "© {{year}} Mohammad Mehdi — Full Stack JS Developer. Crafted with Fastify, Next.js, TypeScript & Tailwind CSS."
+    "copyright": "© {{year}} Mohammad mehdi dabestani — Full Stack JS Developer. Crafted with Fastify, Next.js, TypeScript & Tailwind CSS."
   }
 }
