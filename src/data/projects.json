@@ -12,6 +12,8 @@
     "technologies": [
       { "name": "Fastify", "category": "Backend" },
       { "name": "In-Memory B-Tree Engine", "category": "Core" },
+      { "name": "JEV AI Agent (jev-1.13)", "category": "AI" },
+      { "name": "Neuro-Symbolic Workflow", "category": "AI" },
       { "name": "BFF Architecture", "category": "Frontend" },
       { "name": "Next.js 16 (App Router)", "category": "Frontend" },
       { "name": "TypeScript", "category": "Core" },
@@ -30,28 +32,45 @@
       { "name": "Turborepo", "category": "Tooling" }
     ],
     "en": {
-      "title": "High-Performance Crypto Trading Engine & Real-Time Dashboard",
-      "subtitle": "An architectural demo focusing on in-memory B-Tree order matching, high-throughput WebSocket streams, double-entry ledger, and Next.js BFF",
+      "title": "High-Performance Crypto Trading Engine & JEV AI Assistant",
+      "subtitle": "An architectural demo combining in-memory B-Tree order matching, zero-hallucination JEV AI agent, double-entry ledger, and Next.js BFF",
       "role": "Lead Full Stack & Systems Engineer",
       "timeline": "2024 – 2025",
-      "category": "Fintech / Trading Infrastructure",
-      "shortDescription": "A high-performance trading platform demo built as an architectural proof-of-concept. Engineered specifically to solve low-latency order matching, high-frequency real-time WebSocket pipelines, financial ledger integrity, and Next.js BFF decoupling without the unbounded scope of commercial exchange operations.",
+      "category": "Fintech / Trading Infrastructure & AI",
+      "shortDescription": "An architectural proof-of-concept for crypto trading infrastructure. Engineered specifically around an in-memory B-Tree order matching engine, real-time WebSocket pipelines, Next.js BFF, double-entry accounting ledger, and a zero-hallucination JEV AI trading assistant (jev-1.13) without the open-ended scope of commercial exchange operations.",
       "fullDescription": [
-        "Architected and implemented a high-performance crypto spot trading platform demo. Recognizing that building an exhaustive commercial cryptocurrency exchange encompasses an endless scope of volatile business requirements (e.g. multi-chain custody, fiat banking gateways, regulatory compliance, futures/derivatives), this project deliberately functions as a focused architectural PoC targeting the core engineering bottlenecks of financial trading systems.",
-        "The core order matching engine is implemented in memory using logarithmic B-Trees (sorted-btree) for price levels, achieving O(log N) order placement and execution alongside O(1) user-order tracking. Financial integrity is preserved using an 18-decimal fixed-point BigInt scaling system with Big.js and an immutable Double-Entry Ledger with database Unit of Work transactions.",
-        "The real-time data pipeline features a Fastify WebSocket server with backpressure management, heartbeat watchdog, and throttled orderbook snapshots (200ms) to prevent UI thread starvation. The frontend leverages Next.js App Router as a dedicated BFF (Backend-For-Frontend) layer, pairing React 19 and useSyncExternalStore with reference-counted WebSocket subscriptions and TanStack Query state hydration."
+        "Architected and developed a high-performance crypto spot trading platform demo. Recognizing that building an exhaustive commercial cryptocurrency exchange encompasses an endless scope of volatile business requirements (e.g. multi-chain blockchain nodes, fiat on/off ramps, KYC compliance, futures/derivatives), this project deliberately functions as a focused architectural PoC targeting the core engineering bottlenecks of trading systems.",
+        "The core order matching engine is implemented in memory using logarithmic B-Trees (sorted-btree) for price levels, achieving O(log N) order placement and execution alongside O(1) user-order tracking. Financial integrity is preserved using an 18-decimal fixed-point BigInt scaling system with Big.js and an immutable Double-Entry Ledger protected by database Unit of Work transactions and per-symbol KeyedMutex locks.",
+        "The system introduces a Neuro-Symbolic AI Trading Assistant powered by the JEV Decision Agent (jev-1.13). To eliminate financial hallucinations, the 4-stage pipeline decouples intent classification (JEV multi-head classifier) from deterministic slot extraction (Zod & regex), providing interactive slot-filling and human-in-the-loop trade confirmation cards.",
+        "The real-time data pipeline features a Fastify WebSocket server with backpressure management, heartbeat watchdog, and throttled orderbook snapshots (200ms). The frontend leverages Next.js App Router as a dedicated BFF layer, pairing React 19 and useSyncExternalStore with reference-counted WebSocket subscriptions and TanStack Query state hydration."
       ],
       "metrics": [
-        { "label": "Matching Engine", "value": "O(log N) B-Tree", "detail": "In-memory order book & price level execution" },
-        { "label": "Precision Core", "value": "18-Decimals BigInt", "detail": "Zero floating-point inaccuracies with Big.js" },
-        { "label": "Real-Time Pipeline", "value": "200ms Throttled WS", "detail": "Backpressure-safe snapshot distribution" },
-        { "label": "Data Integrity", "value": "Double-Entry Ledger", "detail": "KeyedMutex & Unit-of-Work concurrency locks" }
+        {
+          "label": "Matching Engine",
+          "value": "O(log N) B-Tree",
+          "detail": "In-memory order book & price level execution"
+        },
+        {
+          "label": "AI Architecture",
+          "value": "JEV Neuro-Symbolic",
+          "detail": "Zero-hallucination multi-head intent classifier"
+        },
+        {
+          "label": "Real-Time Pipeline",
+          "value": "200ms Throttled WS",
+          "detail": "Backpressure-safe snapshot distribution"
+        },
+        {
+          "label": "Data Integrity",
+          "value": "Double-Entry Ledger",
+          "detail": "KeyedMutex & Unit-of-Work concurrency locks"
+        }
       ],
       "roles": [
         {
           "id": "trader",
           "title": "Trader / User",
-          "permissions": "Place limit & market orders, cancel active orders, stream real-time order books, inspect wallet balances, and track trade histories."
+          "permissions": "Place limit & market orders, use the JEV AI natural-language assistant, stream real-time order books, inspect wallet balances, and track trade histories."
         },
         {
           "id": "market-maker",
@@ -65,6 +84,10 @@
         }
       ],
       "features": [
+        {
+          "title": "Zero-Hallucination JEV AI Trading Assistant",
+          "description": "Neuro-symbolic trading workflow combining the JEV decision agent (jev-1.13) for multi-head intent/side/coin classification with deterministic slot extraction, interactive slot-filling, and human-in-the-loop confirmation."
+        },
         {
           "title": "In-Memory B-Tree Matching Engine",
           "description": "Custom matching engine utilizing B-Trees for bids and asks, providing fast price-time priority matching, multi-tier user order indices, and zero-allocation execution loops."
@@ -84,13 +107,14 @@
         {
           "title": "Binance Live Price Feed & Autonomous Market Maker",
           "description": "Live Binance WebSocket consumer with watchdog reconnects powering an internal automated liquidity provider with configurable spreads and depth levels."
-        },
-        {
-          "title": "Modular Draggable Dashboard & TradingView Charts",
-          "description": "Customizable trader interface featuring DnD-Kit draggable panels, TradingView interactive charting, TanStack Tables, and Shadcn UI components."
         }
       ],
       "challenges": [
+        {
+          "title": "Eliminating LLM Hallucinations in Financial Order Execution",
+          "problem": "Allowing standard generative LLMs to calculate trade sizes or execute orders directly risks financial inaccuracy and mathematical hallucinations.",
+          "solution": "Built a 4-stage neuro-symbolic pipeline: JEV AI classifies structured intents with confidence scores, while deterministic regex and Zod schemas extract amounts and prices, requiring human-in-the-loop UI confirmation before hitting the trading engine."
+        },
         {
           "title": "In-Memory Matching Engine vs. Database Persistence Race Conditions",
           "problem": "Fast in-memory order execution could fall out of sync with relational database writes, risking double-spending or cancellation races before settlement.",
@@ -100,43 +124,56 @@
           "title": "High-Frequency WebSocket Flooding & UI Frame Drops",
           "problem": "Unregulated market event streams overwhelmed client browser main threads with excessive React renders and frame drops.",
           "solution": "Implemented server-side 200ms orderbook snapshot throttling with backpressure checks on the Fastify WebSocket server, coupled with a reference-counted client socket store powered by useSyncExternalStore."
-        },
-        {
-          "title": "Floating-Point Calculation Inaccuracies in High-Precision Trading",
-          "problem": "Standard IEEE 754 floating-point numbers in JavaScript introduce rounding discrepancies that invalidate financial balances.",
-          "solution": "Standardized all mathematical calculations on 18-decimal fixed-point BigInt representation, paired with Big.js for safe mathematical evaluations across backend and frontend layers."
         }
       ],
       "architecture": [
         "In-memory high-performance matching engine written with TypeScript and sorted B-Trees (sorted-btree)",
+        "Neuro-symbolic AI assistant pipeline orchestrating the JEV agent (jev-1.13), Zod schemas, and interactive trade confirmation widgets",
         "Fastify core backend delivering sub-millisecond route handling and backpressure-protected WebSocket streams",
         "PostgreSQL relational persistence with type-safe Drizzle ORM and double-entry accounting ledger tables",
         "Next.js 16 App Router operating as a secure BFF layer with Server Components, SSR hydration, and TanStack Query caching"
       ]
     },
     "fa": {
-      "title": "پلتفرم معاملاتی و موتور مچینگ بلادرنگ رمزارز (پروژه دمو و معماری)",
-      "subtitle": "پیاده‌سازی متمرکز هسته مچینگ O(log N) بر پایه B-Tree، لایه BFF با Next.js، جریان استریم WebSocket و لجر حسابداری دوبل",
+      "title": "موتور مچینگ رمزارز و دستیار ترید هوشمند JEV (پروژه دمو و معماری)",
+      "subtitle": "پیاده‌سازی متمرکز هسته مچینگ B-Tree در حافظه، دستیار هوش مصنوعی JEV بدون توهم عددی، لایه BFF با Next.js و لجر حسابداری دوبل",
       "role": "توسعه‌دهنده ارشد Full Stack و معمار سیستم",
-      "timeline": "1405 – 1405",
-      "category": "سیستم‌های مالی / زیرساخت معاملاتی",
-      "shortDescription": "یک پروژه دمو و اثبات مفهوم (PoC) با تمرکز تخصصی بر معماری هسته معاملات رمزارز؛ شامل موتور مچینگ B-Tree درون حافظه، خط لوله وب‌سوکت پرسرعت با کنترل فشار معکوس، دفاتر کل حسابداری دوبل و لایه BFF در Next.js 16 بدون ورود به فیچرهای بی‌پایان یک صرافی تجاری.",
+      "timeline": "۱۴۰۳ – ۱۴۰۴",
+      "category": "سیستم‌های مالی / زیرساخت معاملاتی و هوش مصنوعی",
+      "shortDescription": "یک پروژه دمو و اثبات مفهوم (PoC) با تمرکز تخصصی بر معماری هسته معاملات رمزارز؛ شامل موتور مچینگ B-Tree در حافظه، دستیار هوش مصنوعی نوروسیمبولیک JEV (مدل jev-1.13) بدون خطای محاسباتی، وب‌سوکت پرسرعت با کنترل فشار معکوس، دفاتر لجر دوبل و لایه BFF در Next.js 16 بدون ورود به فیچرهای بی‌پایان یک صرافی تجاری.",
       "fullDescription": [
-        "طراحی و پیاده‌سازی زیرساخت فنی یک سامانه معاملاتی (Spot Trading) به صورت یک پروژه دمو و اثبات مفهوم معماری (Architectural PoC). با توجه به اینکه پیاده‌سازی تمامی بخش‌های یک صرافی رمزارز واقعی (مانند نودهای بلاکچین، احراز هویت چندمرحله‌ای، درگاه‌های فیات، ابزارهای مارجین و استیکینگ) موضوعی بسیار فرار، وسیع و پروژه‌ای عملاً بی‌پایان است، در این پروژه آگاهانه از فیچرهای جانبی صرف‌نظر شده و تمرکز ۱۰۰٪ روی هسته مچینگ، جریان داده زنده، پایداری مالی و مقیاس‌پذیری بالا قرار گرفته است.",
+        "طراحی و پیاده‌سازی زیرساخت فنی یک سامانه معاملاتی (Spot Trading) به صورت یک پروژه دمو و اثبات مفهوم معماری (Architectural PoC). با توجه به اینکه پیاده‌سازی تمامی بخش‌های یک صرافی رمزارز واقعی (مانند نودهای بلاکچین، احراز هویت‌های پیچیده، درگاه‌های فیات، ابزارهای مارجین و استیکینگ) موضوعی بسیار فرار، گسترده و پروژه‌ای عملاً بی‌پایان است، در این پروژه آگاهانه از فیچرهای جانبی صرف‌نظر شده و تمرکز ۱۰۰٪ روی هسته مچینگ، دستیار هوش مصنوعی قطعی، جریان داده زنده، پایداری مالی و مقیاس‌پذیری بالا قرار گرفته است.",
         "موتور مچینگ سفارشات (Matching Engine) در حافظه و با ساختار داده درخت B-Tree (با پیچیدگی زمانی O(log N)) پیاده‌سازی شده تا ثبت و اجرای اردرها با کمترین سربار انجام شود و ایندکس مجزای کاربران دسترسی O(1) به سفارش‌های فعال را ممکن سازد. برای حفظ صحت داده‌های مالی، از سیستم مقیاس‌بندی ۱۸ رقمی با BigInt و کتابخانه Big.js به همراه سیستم دفتر کل دوطرفه (Double-Entry Ledger) و الگوی Unit of Work استفاده شده است.",
-        "جریان داده بلادرنگ سیستم با وب‌سوکت‌های Fastify، پایش مداوم Heartbeat و مکانیزم کنترل فشار معکوس پیاده شده که با فشرده‌سازی و ارسال دوره‌ای اسنپ‌شات‌ها (Throttle ۲۰۰ میلی‌ثانیه‌ای) مانع از افت فریم کلاینت می‌شود. در فرانت‌اند نیز Next.js به عنوان لایه اختصاصی BFF عمل کرده و با مدیریت هوشمند سشن‌ها، SSR و استور بلادرنگ مبتنی بر useSyncExternalStore، نهایت سرعت را برای تریدر فراهم می‌سازد."
+        "یکی از نوآوری‌های کلیدی پروژه، توسعه دستیار معاملاتی مبتنی بر ایجنت تصمیم‌گیر JEV (مدل jev-1.13) با رویکرد نوروسیمبولیک (Neuro-Symbolic) است. برای جلوگیری از توهم مدل‌های زبانی (Hallucination) در اعداد مالی، فرآیند در ۴ مرحله اجرا می‌شود: تشخیص ساختاریافته قصد و نماد توسط JEV با امتیاز اطمینان، استخراج قطعی مقادیر با Zod، فرآیند تعاملی Slot-Filling برای اطلاعات ناقص و نمایش کارت پیش‌نمایش جهت تایید انسانی (Human-in-the-loop) قبل از ثبت نهایی سفارش.",
+        "جریان داده بلادرنگ سیستم با وب‌سوکت‌های Fastify، پایش مداوم Heartbeat و مکانیزم کنترل فشار معکوس پیاده شده که با ارسال دوره‌ای اسنپ‌شات‌ها (Throttle ۲۰۰ میلی‌ثانیه‌ای) مانع از افت فریم کلاینت می‌شود. در فرانت‌اند نیز Next.js به عنوان لایه اختصاصی BFF عمل کرده و با مدیریت هوشمند سشن‌ها، SSR و استور بلادرنگ مبتنی بر useSyncExternalStore، نهایت سرعت را برای تریدر فراهم می‌سازد."
       ],
       "metrics": [
-        { "label": "موتور مچینگ", "value": "O(log N) B-Tree", "detail": "دفتر سفارشات و تطبیق قیمت در حافظه" },
-        { "label": "دقت محاسبات", "value": "BigInt ۱۸ رقمی", "detail": "حذف خطای ممیز شناور مالی با Big.js" },
-        { "label": "جریان بلادرنگ", "value": "سوکت با Throttle ۲۰۰ms", "detail": "ارسال ایمن اسنپ‌شات بدون قفل شدن کلاینت" },
-        { "label": "امنیت داده‌ها", "value": "Double-Entry Ledger", "detail": "کنترل همزمانی با KeyedMutex و UoW" }
+        {
+          "label": "موتور مچینگ",
+          "value": "O(log N) B-Tree",
+          "detail": "دفتر سفارشات و تطبیق قیمت در حافظه"
+        },
+        {
+          "label": "هوش مصنوعی",
+          "value": "ایجنت JEV نوروسیمبولیک",
+          "detail": "طبقه‌بندی چندمحوره قصدها بدون توهم مالی"
+        },
+        {
+          "label": "جریان بلادرنگ",
+          "value": "سوکت با Throttle ۲۰۰ms",
+          "detail": "ارسال ایمن اسنپ‌شات بدون قفل شدن کلاینت"
+        },
+        {
+          "label": "امنیت داده‌ها",
+          "value": "Double-Entry Ledger",
+          "detail": "کنترل همزمانی با KeyedMutex و UoW"
+        }
       ],
       "roles": [
         {
           "id": "trader",
           "title": "معامله‌گر (Trader)",
-          "permissions": "ثبت سفارشات آنی (Market) و محدود (Limit)، لغو سفارشات باز، مشاهده زنده اردربوک، بررسی مانده کیف پول و تاریخچه معاملات."
+          "permissions": "ثبت سفارشات آنی و محدود با فرم یا دستور زبان طبیعی به کمک دستیار JEV، لغو سفارشات، مشاهده زنده اردربوک و کیف پول."
         },
         {
           "id": "market-maker",
@@ -150,6 +187,10 @@
         }
       ],
       "features": [
+        {
+          "title": "دستیار هوشمند ترید مبتنی بر ایجنت JEV بدون توهم عددی",
+          "description": "جریان کار نوروسیمبولیک با ترکیب ایجنت تصمیم‌گیر JEV (مدل jev-1.13) برای طبقه‌بندی مقاصد، استخراج قطعی مقادیر با Zod، فرآیند تکمیلی Slot-Filling و کارت تایید پیش از ثبت معامله."
+        },
         {
           "title": "موتور مچینگ اختصاصی مبتنی بر درخت B-Tree در حافظه",
           "description": "پیاده‌سازی اردربوک دوطرفه در حافظه با درخت‌های متوازن B-Tree، تطابق سفارشات بر اساس اولویت قیمت و زمان و دسترسی O(1) به سفارشات هر کاربر."
@@ -169,13 +210,14 @@
         {
           "title": "اتصال به فید لحظه‌ای بایننس و موتور بازارساز هوشمند",
           "description": "اتصال زنده به WebSocket بایننس با مکانیزم Watchdog و بازتولید عمق بازار از طریق ربات Market Maker برای شبیه‌سازی شرایط واقعی ترید."
-        },
-        {
-          "title": "داشبورد ماژولار ترید با قابلیت شخصی‌سازی و چارت‌های TradingView",
-          "description": "رابط کاربری مدرن با پنل‌های Drag-and-Drop به کمک DnD-Kit، ویجت‌های تعاملی تریدینگ‌ویو، جداول پیشرفته TanStack و کامپوننت‌های Shadcn."
         }
       ],
       "challenges": [
+        {
+          "title": "جلوگیری از توهم مدل‌های زبانی (Hallucination) در اجرای سفارشات مالی",
+          "problem": "سپردن مستقیم تحلیل جملات، محاسبات ریاضی و اجرای اردر به LLMها به دلیل خطاهای محاسباتی و توهم، ریسک مالی غیرقابل جبرانی دارد.",
+          "solution": "طراحی پایپ‌لاین ۴ مرحله‌ای نوروسیمبولیک: واگذاری طبقه‌بندی نیت به ایجنت JEV با شاخص اطمینان، استخراج قطعی اعداد با Zod و رجکس، و الزام تایید کاربر (Human-in-the-loop) در قالب کارت تعاملی قبل از ارسال به موتور مچینگ."
+        },
         {
           "title": "ناهماهنگی بین سرعت مچینگ در حافظه و ذخیره‌سازی در دیتابیس",
           "problem": "سرعت فوق‌العاده مچینگ در حافظه می‌توانست قبل از اتمام تراکنش‌های سنگین دیتابیس، در اثر لغو یا ثبت سفارش جدید باعث خطای Race Condition شود.",
@@ -185,15 +227,11 @@
           "title": "افت فریم و هنگ کردن UI بر اثر بمباران رویدادهای وب‌سوکت",
           "problem": "دریافت صدها رویداد تغییر اردربوک در ثانیه باعث رندرهای پیاپی در React و قفل شدن تب مرورگر کاربر می‌شد.",
           "solution": "پیاده‌سازی مکانیزم Throttled Snapshot روی سرور با بازه ۲۰۰ms همراه با استفاده از useSyncExternalStore و سیستم Reference Counting روی اتصالات سمت فرانت‌اند."
-        },
-        {
-          "title": "خطاهای محاسبات مالی ناشی از اعشار در جاوااسکریپت",
-          "problem": "اعداد اعشاری ممیز شناور (Float) در جاوااسکریپت منجر به خطاهای گردکردن و عدم تعادل حساب‌ها در حجم‌های بالای تراکنش می‌شدند.",
-          "solution": "تبدیل تمامی مقادیر مالی به BigInt با دقت ۱۸ رقم اعشار و بهره‌گیری از Big.js در لایه‌های محاسباتی بک‌اند و فرانت‌اند برای تضمین خطای صفر در ترازها."
         }
       ],
       "architecture": [
         "موتور مچینگ درون‌حافظه‌ای با درخت‌های B-Tree (کتابخانه sorted-btree) و اولویت‌بندی Price-Time",
+        "پایپ‌لاین هوش مصنوعی نوروسیمبولیک هماهنگ‌کننده ایجنت JEV (مدل jev-1.13)، اعتبارسنجی Zod و ویجت‌های تعاملی تایید سفارش",
         "بک‌اند پرسرعت Fastify با پایداری وب‌سوکت، کنترل بافرینگ و سیستم انتشار رویداد EventBus",
         "پایگاه داده PostgreSQL با مدل‌سازی اسکیمای کاملاً ایمن در Drizzle ORM و جداول لجر دوطرفه",
         "لایه BFF با Next.js 16 App Router برای ارکستراسیون درخواست‌ها، SSR بهینه و مدیریت استیت با TanStack Query و Store"
@@ -237,10 +275,26 @@
         "Data integrity and security are enforced at both the route level and database query layer using Drizzle ORM and PostgreSQL, ensuring each staff role only accesses and mutates authorized clinical records."
       ],
       "metrics": [
-        { "label": "Access Roles", "value": "4 Tiers", "detail": "Manager, Doctor, Pharmacy, Admission" },
-        { "label": "Sync Latency", "value": "< 100ms", "detail": "Live queue & status updates via Socket.IO / SSE" },
-        { "label": "Data Pipeline", "value": "Excel I/O", "detail": "Bulk patient & inventory import/export" },
-        { "label": "Architecture", "value": "App Router", "detail": "Hybrid SSR + Client state with Zustand & SWR" }
+        {
+          "label": "Access Roles",
+          "value": "4 Tiers",
+          "detail": "Manager, Doctor, Pharmacy, Admission"
+        },
+        {
+          "label": "Sync Latency",
+          "value": "< 100ms",
+          "detail": "Live queue & status updates via Socket.IO / SSE"
+        },
+        {
+          "label": "Data Pipeline",
+          "value": "Excel I/O",
+          "detail": "Bulk patient & inventory import/export"
+        },
+        {
+          "label": "Architecture",
+          "value": "App Router",
+          "detail": "Hybrid SSR + Client state with Zustand & SWR"
+        }
       ],
       "roles": [
         {
@@ -323,10 +377,26 @@
         "امنیت داده‌های پزشکی و یکپارچگی اطلاعات در سطح مسیرها (Routes) و لایه دیتابیس با استفاده از PostgreSQL و Drizzle ORM تضمین شده است تا هر نقش کاربری صرفاً به اطلاعات و عملیات مجاز خود دسترسی داشته باشد."
       ],
       "metrics": [
-        { "label": "سطوح دسترسی", "value": "۴ نقش مجزا", "detail": "مدیر، پزشک، داروخانه و پذیرش" },
-        { "label": "بروزرسانی لحظه‌ای", "value": "< ۱۰۰ms", "detail": "همگام‌سازی زنده با Socket.IO و SSE" },
-        { "label": "مدیریت داده‌ها", "value": "Excel I/O", "detail": "Import و Export گروهی اطلاعات با اکسل" },
-        { "label": "معماری هسته", "value": "App Router", "detail": "ترکیب SSR با Zustand، SWR و Drizzle" }
+        {
+          "label": "سطوح دسترسی",
+          "value": "۴ نقش مجزا",
+          "detail": "مدیر، پزشک، داروخانه و پذیرش"
+        },
+        {
+          "label": "بروزرسانی لحظه‌ای",
+          "value": "< ۱۰۰ms",
+          "detail": "همگام‌سازی زنده با Socket.IO و SSE"
+        },
+        {
+          "label": "مدیریت داده‌ها",
+          "value": "Excel I/O",
+          "detail": "Import و Export گروهی اطلاعات با اکسل"
+        },
+        {
+          "label": "معماری هسته",
+          "value": "App Router",
+          "detail": "ترکیب SSR با Zustand، SWR و Drizzle"
+        }
       ],
       "roles": [
         {

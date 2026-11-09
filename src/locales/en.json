@@ -78,7 +78,7 @@
   },
   "skills": {
     "badge": "Technical Arsenal",
-    "title": "Core Skills & Full Stack Stack",
+    "title": "Core Skills",
     "subtitle": "Modern JavaScript & TypeScript technologies across Backend, BFF, Frontend, and Real-Time systems.",
     "backend": "Backend & Permissions",
     "backendDesc": "High-performance Node.js APIs with Fastify, type-safe SQL with Drizzle ORM, and CASL abilities",
