@@ -13,8 +13,8 @@ export const resources = {
 
 i18n.use(initReactI18next).init({
   resources,
-  lng: "fa",
-  fallbackLng: "en",
+  lng: "en",
+  fallbackLng: "fa",
   defaultNS,
   interpolation: {
     escapeValue: false,
